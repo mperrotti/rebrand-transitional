@@ -1,0 +1,335 @@
+// ---------------------------
+// IMPORT SOME SASSQUATCH
+// ---------------------------
+@import '../../bower_components/meetup-swatches/sass/colors';
+@import '../../bower_components/sassquatch2/sass/globals';
+@import '../../bower_components/sassquatch2/sass/util';
+
+// ---------------------------
+// REBRAND IMPORTS
+// ---------------------------
+@import 'globals';
+
+// ---------------------------
+// TYPOGRAPHY
+// ---------------------------
+@import 'typography';
+
+// ---------------------------
+// GLOBAL
+// ---------------------------
+html body {
+	background: $C_contentBG;
+	#C_page {
+		background: $C_contentBG; //$C_collectionBGLight
+	}
+}
+
+// top nav
+#logo {
+	width: 48px;
+	height: 48px !important;
+	background: url('http://mperrotti.com/temp_storage/rebrand-transitional/mup-sw.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	@include atMediaUp(medium) {
+		img {
+			display: none !important;
+		}
+	}
+}
+#C_tabs {
+	margin-left: 80px;
+}
+.C_topSm {
+	color: $C_textSecondary;
+}
+.C_topBig {
+	font-weight: $W_bold;
+}
+
+html>body #C_headerBody {
+	margin: 0 auto;
+	width: $bounds-wide;
+}
+
+// spacing
+.doc-content, .doc-controls, .doc-padding {
+	padding: $space;
+}
+
+.leading-bottom {
+	padding-bottom: $space;
+}
+
+.leading-top {
+	padding-top: $space;
+}
+
+// buttons
+
+// buttons - regular
+.button, button, input[type=submit] {
+	margin-bottom: 0;
+	color: $C_accentSecondary !important;
+	box-shadow: none;
+	background: transparent;
+	border: 1px solid;
+	font-weight: $W_bold;
+	&:active {
+		transform: translate(0px,0px);
+		box-shadow: 0;
+	}
+	&:hover {
+		background: transparentize($C_accentSecondary, .8);
+	}
+}
+// buttons - primary
+#C_pageBody .D_submit, #C_pageBody .D_submit_grad, #C_pageBody .primary, #themePickerControls .primary, #C_pageBody .button.primary, #themePickerControls .button.primary, #C_pageBody .button--primary, #themePickerControls .button--primary, #C_pageBody input[type="submit"].primary, #themePickerControls input[type="submit"].primary, #C_pageBody input[type="submit"].button--primary, #themePickerControls input[type="submit"].button--primary {
+	background: $C_accentSecondary;
+	box-shadow: none;
+	color: $C_textPrimaryInverted !important;
+	font-weight: $W_bold;
+
+	&:hover {
+		background: lighten($C_accentSecondary, 8%) !important;
+		color: $C_textSecondaryInverted;
+	}
+
+}
+
+// ---------------------------
+// /FIND STYLES
+// ---------------------------
+#C_pagePreBody .find-navbar {
+	width: $bounds-wide;
+	margin-bottom: $space;
+}
+
+#docked-event-date {
+	color: $C_textSecondary;
+	width: $bounds-wide;
+	text-transform: uppercase;
+	font-weight: $W_super;
+	background: $C_contentBG;
+	box-sizing: border-box;
+	position: relative;
+	top: -$space;
+}
+.docked-event-date-bg {
+	width: $bounds-wide;
+	&:after {
+		bottom: 18px;
+		left: .5%;
+		width: 99%;
+		height: 48px;
+		box-shadow: rgba(0,0,0,.12) 0 0 8px, rgba(0,0,0,.26) 0 4px 4px;
+	}
+}
+
+html body #C_pageBody .searchResults .event-listing .event-title {
+	color: $C_textPrimary;
+	font-weight: $W_bold;
+}
+
+.date-indicator {
+	color: $C_textSecondary;
+}
+
+// ---------------------------
+// MUP STYLES
+// ---------------------------
+
+// page-wide updates
+.actionMenu-actions, .doc-box, .docBox {
+	border: none !important;
+}
+
+html>body #C_pageBody {
+	width: auto;
+	padding: 0;
+}
+
+#C_context, #chapter-navigation {
+	margin: 0 auto;
+	max-width: $bounds-wide;
+	z-index: 0;
+}
+
+#eventdets .doc-content {
+	padding-top: 24px;
+}
+
+// header
+#chapterHeader {
+	border-radius: 0;
+	box-shadow: 0 4px 4px $C_border, 0 0 4px $C_textTertiary;
+	margin-bottom: 0;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+#chapter-banner h1 a {
+	color: $C_textPrimaryInverted !important;
+	letter-spacing: .01em;
+}
+
+.doc-box>.doc-content:first-child {
+	border-radius: 0;
+}
+
+// metabox
+
+/*
+//
+// styles to use if metabox isn't hidden
+//
+html body {
+	.meta-gphoto {
+		display: none;
+	}
+
+	.meta-gphoto + .doc-content {
+		border-top: none !important;
+	}
+
+	#C_metabox .doc-content {
+		padding-left: 0;
+	}
+}
+//
+// END styles to use if metabox isn't hidden
+//
+*/
+
+#C_nav {
+	display: none;
+}
+
+// main content area
+#event-content .dividedList li.event-stack:first-child {
+	padding-top: 0;
+}
+
+#C_document {
+	margin: 0;
+	padding-left: 0;
+}
+
+.doc-content.fixedWidthForIE {
+	width: auto;
+}
+
+.D_actions_new {
+	display: none;
+}
+
+#event-content, #past-event-content {
+	padding-top: 0;
+}
+
+#event-content .dividedList li.event-stack {
+	border-top: none;
+}
+
+.event-stack-icon {
+	background-color: transparent;
+}
+
+.sprite-event-stack {
+	background: transparent;
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.lt .spr-event-stack-calendar {
+	background-position: center top;
+	background-image: url('http://mperrotti.com/temp_storage/rebrand-transitional/icon-time.png');
+}
+
+.lt .spr-event-stack-location {
+	background-position: center top;
+	background-image: url('http://mperrotti.com/temp_storage/rebrand-transitional/icon-location.png');
+}
+
+// discussions
+.talk-heading {
+	display: none;
+}
+
+.comment-wrap {
+	border: 1px solid $C_border;
+	.nib {
+		border-right: 8px solid $C_border;
+	}
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	font-style: normal;
+	color: $C_textSecondary;
+}
+
+.comments ul.dividedList>li {
+	background: transparent; //$C_collectionBGLight
+}
+.mem-photo-background-60, .mem-photo-background-45 {
+	border-radius: 999px;
+}
+
+// .wideContent #C_announceBody, .wideContent #C_contextHeadBody, .wideContent #C_headerBody, .wideContent #C_pageBody, html>body #C_announceBody, html>body #C_contextHeadBody, html>body #C_headerBody, html>body #C_pageBody, html>body .wideContent #C_announceBody, html>body .wideContent #C_contextHeadBody, html>body .wideContent #C_headerBody, html>body .wideContent #C_pageBody {
+// 	width: $bounds-wide;
+// }
+
+// Member list
+.full-attendee-list {
+	.dividedList>li {
+		border-top: none;
+	}
+}
+
+.doc-box>.line .lastUnit .doc-content:first-child,
+#rsvp-mine {
+	border-radius: 0;
+}
+
+#eventdets .event-attendee-section {
+	.line {
+		display: flex;
+		align-items: center;
+		.unit {
+			width: auto;
+		}
+		.size5of7 {
+			flex: 1 0 100%;
+		}
+	}
+	.rsvp-list-content {
+		margin: 0;
+		line-height: inherit;
+	}
+	.mem-photo-small {
+		border-radius: 999px;
+		margin-bottom: 0;
+	}
+}
+
+.member-name {
+	color: $C_textPrimary;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	& + h6 {
+		color: $C_textSecondary;
+		display: inline-block;
+		&:before {
+			content: '- ';
+		}
+	}
+}
+
+.rsvp-introBlurb h6:nth-child(n+3) {
+	display: none;
+}

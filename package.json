@@ -1,0 +1,15 @@
+{
+  "name": "rebrand-transitional",
+  "version": "0.0.1",
+  "description": "Experimenting with transitional styles to prep for the rebrand",
+  "devDependencies": {
+    "bower": "1.4.1",
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-sass": "0.8.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-ftp": "latest"
+  },
+  "author": "mikep@meetup.com",
+  "license": "MIT"
+}

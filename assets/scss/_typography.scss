@@ -1,0 +1,49 @@
+body, html {
+	color: $C_textPrimary;
+	font-size: 16px;
+	line-height: 1.4;
+	font-family: $font;
+	font-weight: 400;
+}
+
+//headers
+h1, h2, h3, h4, h5, h6,
+//buttons
+.button, .button--black, .button--blue, .button--green, .button--primary, .button--white, .button-flat, .button-flat--black, .button-flat--gray, .button-flat--green, .button-flat--red, .button-flat--white, .button-photo, .button-photo--white, .button.primary, .primary, button, input[type=submit], input[type=submit].D_submit, input[type=submit].button--black, input[type=submit].button--blue, input[type=submit].button--green, input[type=submit].button--primary, input[type=submit].primary,
+//tearsheets
+.nav-pagination, .tearsheet .day, .tearsheet--big .day, .tearsheet--small .day,
+//nav buttons
+.nav-buttons label, .nav-buttons li>a, .nav-buttons li>span {
+	font-family: $font;
+}
+
+//headers
+h1, h2, h3, h4, h5, h6 {
+	color: $C_textPrimary;
+	font-weight: $W_bold;
+}
+
+h1 {
+	font-size: $font-size-display1;
+	font-weight: $W_super;
+}
+
+h3 {
+	font-size: $font-size;
+	letter-spacing: 0;
+}
+
+// bold
+b, strong {
+	font-weight: $W_bold;
+}
+
+// links
+#C_pageBody a, #C_pageBody a:link, #C_pageBody a:visited, #C_pageBody a:hover, #C_pageBody a:active, #C_pageBody .theme-color--link {
+	color: $C_link;
+}
+
+// MUP-page typography
+.event-stack .subtext {
+	color: $C_textPrimary;
+}

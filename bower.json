@@ -1,0 +1,17 @@
+{
+  "name": "rebrand-transitional",
+  "version": "0.0.1",
+  "description": "Experimenting with transitional styles to prep for the rebrand",
+  "ignore": [
+    "Gemfile",
+    ".ruby-version",
+    ".bowerrc",
+    "**/*.sh",
+    "**/*.txt",
+    "**/*.lock"
+  ],
+  "dependencies": {
+    "sassquatch2": null
+  },
+  "license": "MIT"
+}
