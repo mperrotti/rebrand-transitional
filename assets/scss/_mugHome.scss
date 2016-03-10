@@ -1,0 +1,400 @@
+// Remove borders from modules
+.actionMenu-actions, .doc-box, .docBox {
+	border: 1px solid $C_border !important;
+	border-bottom: 1px solid $C_textHint !important;
+}
+
+
+//
+// Wide page layout
+//
+$W_metaBox: 240px;
+
+html>body #C_pageBody {
+	width: auto;
+	// padding: 0;
+}
+
+#C_context, #chapter-navigation {
+	margin: 0 auto;
+	max-width: $bounds-wide;
+	z-index: 0;
+}
+
+#eventdets .doc-content {
+	padding-top: 24px;
+}
+
+.wideContent #C_announceBody,
+.wideContent #C_contextHeadBody,
+.wideContent #C_headerBody,
+.wideContent #C_pageBody,
+html>body #C_announceBody,
+html>body #C_contextHeadBody,
+html>body #C_headerBody,
+html>body #C_pageBody,
+html>body .wideContent #C_announceBody,
+html>body .wideContent #C_contextHeadBody,
+html>body .wideContent #C_headerBody,
+html>body .wideContent #C_pageBody,
+#chapterHeader {
+	width: $bounds-wide;
+}
+
+#chapter-banner h1 a {
+	background-size: cover;
+	height: 172px;
+}
+
+#C_nav {
+	width: $W_metaBox;
+}
+
+.v4-gh-main-column {
+	width: 644px;
+}
+
+#C_document {
+	margin: 0 0 0 $W_metaBox;
+}
+
+.event-content {
+	width: 480px;
+	padding-right: $space;
+	box-sizing: border-box;
+}
+
+.event-item .event-desc {
+	margin: $space-half 0 0;
+}
+.event-item .event-where, .event-item .event-where-incomplete, .event-item .event-desc, .event-item .event-hosts, .event-item .event-comments {
+	width: 100%;
+}
+
+#ajax-container .no-member {
+	background-color: $C_collectionBG;
+	border: initial;
+	height: $media-s;
+	margin-top: initial;
+	width: $media-s;
+}
+
+.event-rsvpPhotos {
+	li{
+		margin-right: 4px;
+	}
+	.more a {
+		background: $C_contentBG;
+		border: initial;
+		box-sizing: border-box;
+		line-height: $media-s;
+		width: $media-s;
+	}
+	.thumb30 {
+		width: $media-s;
+		height: $media-s;
+		img {
+			min-height: $media-s;
+			max-width: $media-s;
+		}
+	} 
+}
+// END Wide page layout
+
+
+//
+// Chapter header
+//
+#chapter-navigation {
+	padding: $space-half $space;
+}
+
+//
+// Left sidebar (metabox and friends)
+//
+#C_metabox {
+	.adr h3, .meta-gphoto + .doc-content h3 {
+		font-size: $font-size;
+		padding-bottom: initial;
+		font-weight: $W_normal;
+	}
+	.adr .small {
+		color: $C_textSecondary;
+	}
+}
+
+.meta-gphoto {
+	margin-top: 0;
+	padding-top: $space-half;
+}
+
+.J_anchoredBubbleWrap {
+	border: 1px solid $C_border;
+	box-shadow: 0 0 2px 0 $C_border, 2px 2px 4px 0 $C_border;
+
+	.close {
+    border: initial;
+    background: initial;
+    font-size: $media-xs;
+	}
+
+	.closethick {
+		color: $C_textSecondary;
+	}
+}
+
+#C_metabox .dividedList li {
+	border-top: initial;
+}
+
+.meta-topics-block {
+	margin-bottom: 0;
+}
+
+#C_nav .dividedList li:first-child {
+	border-top: initial;
+}
+
+.D_sponsorImage {
+	background: transparent;
+	& ~ h5,
+	& ~ p {
+		text-align: center;
+	}
+}
+
+#meetup_serendipity {
+	.small {
+		font-size: $font-size;
+    line-height: $line-height !important;
+	}
+	ul {
+		text-align: center;
+	}
+	h5 {
+		margin-bottom: $space-quarter;
+	}
+	.unit {
+		float: none;
+		width: 100%;
+	}
+}
+
+//
+// main content area
+//
+
+// .v4-gh-main-column {
+// 	box-sizing: border-box;
+// 	padding: $space;
+
+// 	.docSection {
+// 		padding: 0;
+// 	}
+// }
+
+#C_document {
+	padding-left: $space;
+}
+
+#welcome-message {
+	@extend %text--big;
+	//@extend %text--display3;
+}
+
+#lma {
+	background-color: $C_contentBG;
+	margin: initial;
+	padding: $space;
+	.nav-tabs {
+		background-color: $C_contentBG;
+		.tabcount {
+			padding-left: $space-quarter;
+		}
+	}
+}
+
+// Suggest a MUG button
+#lma-suggest {
+	background: $C_contentBG;
+  color: $C_textPrimary;
+  border: 1px solid $C_border;
+  border-radius: $defaultRadius;
+  font-weight: $W_bold;
+  text-transform: initial;
+  font-size: $font-size-small;
+	margin: 0 $space;
+  padding-bottom: $space-half;
+  padding-top: $space-half;
+	text-align: center;
+}
+
+.plus_bk {
+  background-position: 10px 6px;
+}
+
+#events-nav a {
+	font-size: $font-size;
+}
+
+//
+// Event list
+//
+#ajax-container {
+	border-top: initial;
+}
+
+.event-item {
+	border-bottom: 1px solid $C_border;
+	padding: $space;
+	margin-bottom: initial;
+
+	h3 {
+		@extend %text--big;
+		padding-bottom: 0;
+		border-bottom: initial;
+	}
+}
+
+.event-list {
+	padding: 0;
+}
+
+.event-content {
+	border-right: initial;
+	margin-bottom: initial;
+}
+
+.event-desc a {
+	// !important is used to beat out inline styles
+	font-size: $font-size-small !important;
+	text-transform: initial !important;
+}
+
+.event-item dl.event-where dd {
+	@extend %text--caption;
+}
+
+.event-meta {
+	.dateTime {
+		margin-bottom: $space-half;
+	}
+	
+	.time {
+		@extend %text--small;
+	}
+
+	.rsvp-callout-outer {
+    background-color: initial;
+		padding: 0;
+    margin-bottom: $space;
+
+		.rsvp-callout-rsvp {
+			@include notSQ_button;
+			padding-left: initial;
+			padding-right: initial;
+		}
+
+		.rsvp-callout-closed {
+	    background: initial;
+	    color: $C_textSecondary;
+	    font-style: initial;
+	    padding: 0;
+	    text-align: initial;
+		}
+	}
+
+	.rsvp-meta {
+		@extend %text--caption;
+	}
+
+	ul {
+		margin-bottom: $space-half;
+	}
+
+	.event-count {
+		padding-top: initial;
+
+		em {
+			font-weight: $W_medium;
+			margin-right: initial;
+		}
+
+	}
+}
+
+.rsvp-meta-subtle-link a:link, .rsvp-meta-subtle-link a:visited, .rsvp-meta-subtle-link a:hover {
+	@extend %text--secondary;
+}
+
+//
+// Event list past
+//
+#recentMeetups h2 {
+	@extend %text--big;
+	border-bottom: 1px solid $C_border;
+	padding: $space-half $space;
+}
+
+.event-attended {
+	@extend %text--caption;
+}
+
+.past .event-rsvpPhotos {
+	margin-top: $space-half;
+	margin-bottom: $space-half;
+}
+
+.event-rating {
+	margin-bottom: $space;
+}
+
+.event-list-more {
+	padding: $space;
+}
+
+.past .event-desc a {
+	// !important is used to beat out inline styles
+	font-size: $font-size !important;
+	text-transform: initial !important;
+}
+
+//
+// event
+//
+
+/*
+#C_document {
+	margin: 0;
+	padding-left: 0;
+}
+
+.doc-content.fixedWidthForIE {
+	width: auto;
+}
+
+.D_actions_new {
+	display: none;
+}
+*/
+
+//
+// What's New column
+//
+
+.ghome-feed-box h3 {
+	@extend %text--big;
+}
+
+.v4-gh-last-column {
+	box-sizing: border-box;
+	padding-left: $space;
+}
+
+.v4-photo-block-anc img {
+	width: 100%;
+}
+
+
+
+

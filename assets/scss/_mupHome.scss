@@ -1,0 +1,113 @@
+//
+// main content area
+//
+#event-content .dividedList li.event-stack:first-child {
+	padding-top: 0;
+}
+
+#event-content, #past-event-content {
+	padding-top: 0;
+}
+
+#event-content .dividedList li.event-stack {
+	border-top: none;
+}
+
+.event-stack-icon {
+	background-color: transparent;
+}
+
+.sprite-event-stack {
+	background: transparent;
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.lt .spr-event-stack-calendar {
+	background-position: center top;
+	background-image: url('http://mperrotti.com/temp_storage/rebrand-transitional/icon-time.png');
+}
+
+.lt .spr-event-stack-location {
+	background-position: center top;
+	background-image: url('http://mperrotti.com/temp_storage/rebrand-transitional/icon-location.png');
+}
+
+// discussions
+.talk-heading {
+	display: none;
+}
+
+.comment-wrap {
+	border: 1px solid $C_border;
+	.nib {
+		border-right: 8px solid $C_border;
+	}
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	font-style: normal;
+	color: $C_textSecondary;
+}
+
+.comments ul.dividedList>li {
+	background: transparent; //$C_collectionBGLight
+}
+.mem-photo-background-60, .mem-photo-background-45 {
+	border-radius: 999px;
+}
+
+//
+// Member list
+//
+.full-attendee-list {
+	.dividedList>li {
+		border-top: none;
+	}
+}
+
+.doc-box>.line .lastUnit .doc-content:first-child,
+#rsvp-mine {
+	border-radius: 0;
+}
+
+
+#eventdets .event-attendee-section {
+	.line {
+		display: flex;
+		align-items: center;
+		.unit {
+			width: auto;
+		}
+		.size5of7 {
+			flex: 1 0 100%;
+		}
+	}
+	.rsvp-list-content {
+		margin: 0;
+		line-height: inherit;
+	}
+	.mem-photo-small {
+		border-radius: 999px;
+		margin-bottom: 0;
+	}
+}
+
+.member-name {
+	color: $C_textPrimary;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	& + h6 {
+		color: $C_textSecondary;
+		display: inline-block;
+		&:before {
+			content: '- ';
+		}
+	}
+}
+
+.rsvp-introBlurb h6:nth-child(n+3) {
+	display: none;
+}

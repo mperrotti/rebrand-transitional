@@ -1,0 +1,32 @@
+//
+// TODO: Clean this up a little?
+//
+
+@mixin notSQ_button {
+	border: 1px solid $C_border;
+	box-shadow: none;
+	background: white;
+	color: $C_textPrimary !important;
+	font-weight: $W_bold;
+	margin-bottom: 0;
+	text-align: center;
+	&:active {
+		transform: translate(0px,0px);
+		box-shadow: 0;
+	}
+	&:hover {
+		background: transparentize($C_textPrimary, .8);
+	}
+}
+
+@mixin notSQ_button--primary {
+	background: $C_accent;
+	box-shadow: none;
+	color: $C_textPrimaryInverted !important;
+	font-weight: $W_bold;
+
+	&:hover {
+		background: lighten($C_accent, 8%) !important;
+		color: $C_textSecondaryInverted;
+	}
+}

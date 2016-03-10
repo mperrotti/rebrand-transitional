@@ -1,0 +1,34 @@
+#C_pagePreBody .find-navbar {
+	width: $bounds-wide;
+	margin-bottom: $space;
+}
+
+#docked-event-date {
+	color: $C_textSecondary;
+	width: $bounds-wide;
+	text-transform: uppercase;
+	font-weight: $W_bold;
+	background: $C_contentBG;
+	box-sizing: border-box;
+	position: relative;
+	top: -$space;
+}
+.docked-event-date-bg {
+	width: $bounds-wide;
+	&:after {
+		bottom: 18px;
+		left: .5%;
+		width: 99%;
+		height: 48px;
+		box-shadow: rgba(0,0,0,.12) 0 0 8px, rgba(0,0,0,.26) 0 4px 4px;
+	}
+}
+
+html body #C_pageBody .searchResults .event-listing .event-title {
+	color: $C_textPrimary;
+	font-weight: $W_medium;
+}
+
+.date-indicator {
+	color: $C_textSecondary;
+}

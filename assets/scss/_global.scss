@@ -1,0 +1,152 @@
+html body {
+	background: $C_contentBG;
+	#C_page {
+		background-color: $C_collectionBG; //$C_contentBG
+	}
+}
+
+//
+// top nav
+
+// replace w/ new logo
+// #logo {
+// 	width: 48px;
+// 	height: 48px !important;
+// 	background: url('http://mperrotti.com/temp_storage/rebrand-transitional/mup-sw.png');
+// 	background-position: center;
+// 	background-size: contain;
+// 	background-repeat: no-repeat;
+// 	@include atMediaUp(medium) {
+// 		img {
+// 			display: none !important;
+// 		}
+// 	}
+// }
+#C_tabs {
+	margin-left: 80px;
+}
+.C_topSm {
+	color: $C_textSecondary;
+}
+.C_topBig {
+	font-weight: $W_medium;
+}
+
+html>body #C_headerBody {
+	margin: 0 auto;
+	width: $bounds-wide;
+}
+
+// spacing
+.doc-content, .doc-controls, .doc-padding {
+	padding: $space;
+}
+
+.leading-bottom {
+	padding-bottom: $space;
+}
+
+.leading-top {
+	padding-top: $space;
+}
+
+.margin-bottom, .marginBottom {
+	margin-bottom: $space;
+}
+
+.margin-top, .marginTop {
+	margin-top: $space;
+}
+
+// buttons
+
+// buttons - regular
+.button, button, input[type=submit], .metaButton {
+	@include notSQ_button;
+}
+// buttons - primary
+#C_pageBody .D_submit, #C_pageBody .D_submit_grad, #C_pageBody .primary, #themePickerControls .primary, #C_pageBody .button.primary, #themePickerControls .button.primary, #C_pageBody .button--primary, #themePickerControls .button--primary, #C_pageBody input[type="submit"].primary, #themePickerControls input[type="submit"].primary, #C_pageBody input[type="submit"].button--primary, #themePickerControls input[type="submit"].button--primary {
+	@include notSQ_button--primary;
+}
+
+//
+// MUP tabs
+//
+// just applying SQ2 styles
+$_tabBorder: 4px;
+.navTabs, .nav-tabs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+
+	li {
+		color: $C_textSecondary;
+		padding: 0;
+		margin: 0 0 0 $space;
+		cursor: pointer;
+		display: inline-block;
+		border-bottom: $_tabBorder solid transparent;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		.inverted & {
+			color: $C_textSecondaryInverted;
+			&:hover {
+				color: $C_textSecondaryInverted;
+			}
+			&.tabs-tab--selected {
+				color: $C_textPrimaryInverted;
+				border-bottom-color: $C_textPrimaryInverted;
+			}
+		}
+		
+		&.selected {
+			color: $C_link;
+			font-weight: $W_medium;
+			border-bottom: $_tabBorder solid $C_link;
+		}
+	}
+}
+
+// blow away old styles
+.navTabs, .nav-tabs {
+	border-bottom: initial;
+
+	&.small {
+		font-size: $font-size;
+	}
+
+	li {
+
+		a {
+			color: $C_textSecondary;
+			border-top-left-radius: initial;
+			border-top-right-radius: initial;
+			display: initial;
+			text-decoration: initial;
+			background-color: initial;
+			border: initial;
+			border-color: initial;
+			padding: initial;
+		}
+
+		&.selected {
+	    background-color: initial;
+
+			a {
+				color: $C_link;
+				background-color: initial;
+				border-color: initial;
+				border-bottom-color: initial;
+			}
+		}
+	}
+}
+
+// typography
+.small, small {
+	@extend %text--small;
+}
