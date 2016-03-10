@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'assets/css/sq2.css': DIR_BOWER + 'sassquatch2/sass/sassquatch.scss',
-					'assets/css/shim.css': 'assets/scss/shim.scss',
+					//'assets/css/shim.css': 'assets/scss/shim.scss',
 					'assets/css/brand-transition.css': 'assets/scss/brand-transition.scss'
 				}
 			}
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 		'watch': {
 
 			css: {
-				files: ['assets/scss/*.scss'],
+				files: ['assets/scss/*.scss', 'assets/scss/**/*.scss'],
 				tasks: ['sass'],
 				options: {
 					livereload: false,

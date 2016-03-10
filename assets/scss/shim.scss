@@ -54,7 +54,7 @@
 	width: 100%;
 	z-index: map-get($zindex-map, "shade");
 	@include transition(all .15s);
-	background: $C_modalShade;
+	background: $C_dimmingOverlay;
 	opacity: 1;
 	&.off{
 		opacity: 0;
@@ -63,6 +63,7 @@
 
 // MOMENTARY
 // Popover menu
+$pointer_size: 12px;
 .momentary {
   @include transition(transform 150ms $ease-in-quart, opacity 150ms $ease-in-quart);
   @include transform(translateY(0));
