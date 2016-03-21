@@ -1,0 +1,6 @@
+@mixin notSQ_valign--middle {
+	-webkit-align-self: center;
+	align-self: center;
+	-ms-flex-item-align: center;
+	vertical-align: middle !important;	
+}

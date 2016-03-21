@@ -1,0 +1,153 @@
+//
+// Photos
+//
+#albumListView .stripe--overlap--collection:before, #albumDetailView .stripe--overlap--collection:before {
+	border-bottom: 24px solid $C_collectionBG;
+}
+
+//
+// MUP create
+//
+#event_create-view {
+	.doc-content {
+		padding: $space-half $space;
+	}
+}
+
+#addEvent {
+	.enabler .touchList-label--input {
+		padding-top: initial;
+		padding-bottom: initial;
+		padding-left: initial;
+	}
+}
+
+//
+// Member list
+//
+
+// kill the sort animation
+.ani-flip-in, .member-list.trigger-sort-anim .apply-sort-anim--show {
+	@include animation-name(fade-in);
+}
+
+.ani-flip-out, .member-list.trigger-sort-anim .apply-sort-anim--hide{
+	@include animation-name(fade-out);
+}
+
+.member-list.trigger-sort-anim .apply-sort-anim--hide {
+	border-bottom: 1px solid $C_border;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes -webkit-fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes -webkit-fade-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+//
+// Recommended Meetups
+//
+%_columnItemBase {
+	@include flex-basis(auto);
+	box-sizing: border-box;
+	height: initial;
+}
+
+.card--group-content {
+	@include flexParent('column');
+	@include flex-wrap('nowrap');
+	height: 100%;
+	text-align: left;
+
+	h4 {
+		@extend %_columnItemBase;
+		@extend %text--heavy;
+		@include flex-grow(1);
+
+		@include browser-lessThanIE(10) {
+			display: table-row;
+			height: auto;
+		}
+	}
+
+	p {
+		@extend %_columnItemBase;
+		@include flex-grow(0);
+
+		@include browser-lessThanIE(10) {
+			height: 1%;
+		}
+	}
+}
+
+//
+// Settings
+//
+#settings-view {
+	.touchList--menu .touchList-label {
+		font-size: $font-size;
+		font-weight: $W_medium;
+		color: $C_textPrimary;
+	}
+
+	& ~ .view {
+		background: $C_collectionBG;
+
+		form .doc-content:last-child {
+			padding-top: 0;
+
+			.margin-top {
+				margin-top: 0 !important;
+			}
+		}
+	}
+}
+
+// Settings/Other
+.chapterSettings-emailContent {
+	padding-left: initial;
+}
+
+//
+// Join
+//
+.success-box, .error-box, .doc-box.success-box, .success-box.doc-box--fullWidth, .success-box.navBar-searchWrapper, .success-box.formBlock, .success-box.info-box, .doc-box.error-box, .error-box.doc-box--fullWidth, .error-box.navBar-searchWrapper, .error-box.formBlock, .error-box.info-box {
+	background-position: $space-half $space;
+}
+
+form#profile h3 {
+	display: none;
+}
+
+
+
+

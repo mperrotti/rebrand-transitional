@@ -1,0 +1,125 @@
+//
+// background
+//
+
+// .view {
+// 	background: $C_contentBG;
+// }
+
+//
+// navbar titles
+//
+.navBar-titleBlock {
+	padding: $space-half $space $space-half $space-half;
+}
+
+.navBar-title,
+.navBar-subtitle {
+	line-height: initial;
+}
+
+.navBar-title {
+	font-weight: $W_medium;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+.navBar-subtitle {
+	color: $C_textSecondary;
+	font-weight: $W_normal;
+	font-size: $font-size-small;
+	line-height: $line-height-smallText;
+}
+
+//
+// spacing
+//
+.inset {
+	padding: $space-quarter $space;
+}
+.flush-top {
+	padding-top: 0;
+}
+
+//
+// lists
+//
+.shadedList>li {
+	background: initial;
+	padding: $space-half 0;
+	margin-bottom: initial;
+}
+
+//
+// touchlist
+//
+.touchList-caption {
+	font-size: $font-size-small;
+	line-height: $line-height-smallText;
+}
+
+.touchList-heading {
+	@extend %text--big;
+	color: $C_textPrimary;
+	margin-bottom: initial;
+}
+
+//
+// forms
+//
+.touchList-label--item, .touchList .touchList-blockLabel, .touchList .touchList-label--textarea, .touchList-item-heading {
+	color: $C_textPrimary;
+	font-size: $font-size-small;
+}
+
+.touchList-item--textarea textarea, .touchList-item--twoLineTextarea textarea {
+	line-height: $line-height;
+	margin-bottom: 0;
+}
+
+.touchList {
+
+	.touchList-item--input input {
+		// line-height: $line-height;
+		// padding: 8px;
+	}
+
+	.touchList-item--input label,
+	.touchList-item--input label h4 {
+		font-weight: $W_medium;
+	}
+
+	.touchList-label {
+		color: $C_textPrimary;
+	}
+
+	label.touchList-helperText {
+		font-size: $font-size-small;
+		line-height: $line-height-smallText;
+		// padding: 0 $space-half;
+		// margin-top: -#{$space-half};
+	}
+
+	.error label.touchList-helperText {
+		color: $C_attention;
+	}
+
+	li.error {
+		background: desaturate(lighten($C_attention, 38%), 9%);
+		border-bottom: 1px solid $C_attention;
+	}
+
+	.touchList-item--textarea textarea, .touchList-item--twoLineTextarea textarea {
+		// line-height: $line-height;
+		// margin-bottom: $space-half;
+		// padding: $space-half $space-half 0;
+	}
+
+	.touchList-item--input-counter {
+		color: $C_textHint;
+		font-size: $font-size-small;
+		font-weight: $W_normal;
+		text-align: right;
+	}
+
+}

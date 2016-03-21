@@ -1,0 +1,105 @@
+#event-page h1 {
+	margin-bottom: $space;
+}
+
+// tabs
+#event-page .nav-tabs {
+	padding-left: $space;
+	padding-right: $space;
+}
+
+// RSVP status and invite btn
+.rsvpBanner-inviteBtn {
+	background: $C_contentBG !important;
+	color: $C_textPrimary !important;
+	font-weight: $W_medium;
+}
+
+h3.banner-text {
+	@extend %text--big;
+}
+
+.yes {
+	background: $C_success;
+}
+
+.no {
+	background: $C_textSecondary;
+}
+
+#rate {
+	// not actually rate, says whether or not you went
+	text-align: center;
+}
+
+// Rating
+#event-page	{
+	.star-rating {
+		padding-top: 0;
+		margin-bottom: $space;
+	}
+}
+
+// Discussions
+#event-page {
+
+	.j-mute {
+		color: $C_link;
+	}
+
+	.replyBar {
+		border-top: 1px solid $C_border;
+		margin-left: initial;
+		margin-right: initial;
+	}
+	
+	.j-event-comment .flush-top {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.j-event-comment .jCommentLinks.flush-top {
+		padding-bottom: $space;
+	}
+}
+
+.replies .doc-content-into.shaded::after, .replies .doc-content-outof.shaded::after,
+.doc-content-into.shaded:after, .doc-content-outof.shaded:after {
+	border-bottom: 6px solid $C_collectionBG;
+}
+
+.doc-content-outof:before {
+	border-color: transparent;
+}
+
+
+// member list
+.touchList {
+
+	.touchList-attendee-name {
+		
+		font-size: $C_textPrimary;
+		font-weight: $W_medium;
+		line-height: $line-height;
+	}
+
+	.touchList-attendee-funfact-description {
+		padding-left: initial;
+	}
+
+	.touchList-attendee-funfact {
+		margin: $space-half 0;
+
+		.lightbulb {
+			display: none;
+		}
+	}
+
+	.touchList-attendee-role {
+		font-size: $font-size-small;
+		color: $C_textPrimary;
+		line-height: $line-height-smallText;
+		font-weight: $W_normal;
+	}
+
+}
