@@ -1,7 +1,9 @@
+/*
+
 body, html {
 	color: $C_textPrimary;
 	font-size: 16px;
-	line-height: 1.4;
+	line-height: 1.45;
 	font-family: $font;
 	font-weight: 400;
 }
@@ -20,7 +22,7 @@ h1, h2, h3, h4, h5, h6,
 //headers
 h1, h2, h3, h4, h5, h6 {
 	color: $C_textPrimary;
-	font-weight: $W_bold;
+	font-weight: $W_medium;
 }
 
 h1 {
@@ -35,7 +37,7 @@ h3 {
 
 // bold
 b, strong {
-	font-weight: $W_bold;
+	font-weight: $W_medium;
 }
 
 // links
@@ -47,3 +49,5 @@ b, strong {
 .event-stack .subtext {
 	color: $C_textPrimary;
 }
+
+*/

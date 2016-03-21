@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-ftp');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -18,8 +19,15 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'assets/css/sq2.css': DIR_BOWER + 'sassquatch2/sass/sassquatch.scss',
-					//'assets/css/shim.css': 'assets/scss/shim.scss',
 					'assets/css/brand-transition.css': 'assets/scss/brand-transition.scss'
+				}
+			}
+		},
+
+		'uglify': {
+			my_target: {
+				files: {
+					'assets/js/scripts.min.js': ['assets/js/dist/*.js']
 				}
 			}
 		},
@@ -37,6 +45,7 @@ module.exports = function(grunt) {
 			upload: {
 				files: {
 					'public_html/temp_storage/rebrand-transitional': 'assets/css/*'
+					// 'public_html/temp_storage/rebrand-transitional': 'assets/js/scripts.min.js'
 				}
 			}
 		},
@@ -50,11 +59,20 @@ module.exports = function(grunt) {
 					livereload: false,
 					spawn: false,
 				}
+			},
+
+			js: {
+				files: ['assets/js/dist/*.js'],
+				tasks: ['uglify'],
+				options: {
+					livereload: false,
+					spawn: false,
+				}
 			}
 
 		}
 	});
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['clean', 'sass']);
+	grunt.registerTask('build', ['clean', 'sass', 'uglify']);
 	grunt.registerTask('upload', ['ftpPut']);
 };

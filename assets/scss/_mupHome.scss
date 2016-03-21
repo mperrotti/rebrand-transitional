@@ -1,17 +1,141 @@
 //
+// announce notice
+//
+.chapter-alert {
+	background: $C_contentBGInverted;
+	margin: 0 0 $space;
+	padding: $space;
+
+	.note-header {
+		@extend %text--big;
+		color: $C_textPrimaryInverted;
+	}
+
+	.note {
+		color: $C_textSecondaryInverted;
+		font-size: $font-size;
+	}
+
+	.pending-action {
+		margin-top: initial;
+	}
+
+}
+
+//
+// RSVP area
+//
+#rsvp-mine {
+	h3, .rsvp-change {
+		color: initial;
+		margin-bottom: $space-half;
+	}
+
+	h3 {
+		color: $C_textPrimaryInverted;
+	}
+
+	.rsvp-change {
+		@include color-all( $C_textPrimaryInverted );
+		@include notSQ_button--fullWidth;
+		@include notSQ_button--small;
+		background: $C_textHint;
+		border: 1px solid $C_borderInverted;
+		border-color: $C_borderInverted;
+		padding: $space-quarter $space-half;
+		text-transform: initial;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: $C_textSecondaryInverted;
+			border-color: $C_borderDarkInverted;
+			text-decoration: none;
+		}
+	}
+
+	.rsvp-inviteBtn {
+		@include color-all( $C_textPrimary );
+		@include notSQ_button--small;
+		@include notSQ_button--fullWidth;
+		background: $C_contentBG;
+		border-color: $C_contentBG;
+		margin-bottom: initial;
+		padding: $space-quarter $space-half;
+		text-transform: initial;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: $C_borderDarkInverted;
+			text-decoration: none;
+		}
+	}
+}
+
+//
 // main content area
 //
-#event-content .dividedList li.event-stack:first-child {
-	padding-top: 0;
+
+#event-title h1 {
+	@extend %text--display2;
+	line-height: $line-height-largeText;
+}
+
+.featured-callout {
+	color: initial;
+	left: initial;
+	position: initial;
+	top: initial;
+
+	.featured-text {
+		@extend %text--labelSecondary;
+		background: transparent;
+		color: $C_textSecondary !important;
+		padding: 0;
+	}
+
+	.featured-pointer, .featured-ribbon {
+		display: none;
+	}
+
+}
+
+.eventdets-header-org-actions {
+	margin-bottom: $space;
 }
 
 #event-content, #past-event-content {
 	padding-top: 0;
+
+	// .dividedList li.event-stack:first-child {
+	// 	padding-top: 0;
+	// }
+
+	.dividedList li.event-stack {
+		border-top: none;
+	}
+
+	h3 {
+		@extend %text--big;
+	}
 }
 
-#event-content .dividedList li.event-stack {
-	border-top: none;
+.complete a, .incomplete a {
+	color: $C_link;
 }
+
+.fixedWidthForIE {
+	width: initial;
+}
+
+// #event-content, #past-event-content {
+// 	padding-top: 0;
+// }
+
+// #event-content .dividedList li.event-stack {
+// 	border-top: none;
+// }
 
 .event-stack-icon {
 	background-color: transparent;
@@ -24,25 +148,70 @@
 }
 
 .lt .spr-event-stack-calendar {
-	background-position: center top;
+	background-position: center;
 	background-image: url('http://mperrotti.com/temp_storage/rebrand-transitional/icon-time.png');
 }
 
 .lt .spr-event-stack-location {
-	background-position: center top;
+	background-position: center;
 	background-image: url('http://mperrotti.com/temp_storage/rebrand-transitional/icon-location.png');
+}
+
+#event-description-wrap, #past-event-description-wrap {
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+// past mup
+#past-event-content {
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+.no-photos-yet-add, #pastPhotoStack {
+	height: 48px;
+	margin: 0;
+}
+
+.no-photos-yet-add object, .no-photos-yet-add #add-photo-action, #pastPhotoStack object, #pastPhotoStack #add-photo-action {
+	font-size: $font-size-small;
+	font-weight: $W_normal;
+	padding: 0 $space-quarter;
+}
+
+#past-event-description-wrap .see-all {
+	padding-left: initial;
+	font-size: initial;
+	font-weight: initial;
+	text-transform: lowercase;
 }
 
 // discussions
 .talk-heading {
-	display: none;
+	@extend %text--big;
 }
 
 .comment-wrap {
 	border: 1px solid $C_border;
+
+	.comment-input-wrap {
+		background: $C_collectionBG;
+
+		textarea:focus {
+			background: $C_collectionBG;
+		}
+	}
+
 	.nib {
 		border-right: 8px solid $C_border;
 	}
+	.inner-nib {
+		border-right: 7px solid $C_collectionBG;
+	}
+}
+
+a.j-mute, a.j-mute:link, a.j-mute:active, a.j-mute:visited a.j-mute:hover {
+	color: $C_textTertiary;
 }
 
 input::-webkit-input-placeholder,
@@ -52,15 +221,41 @@ textarea::-webkit-input-placeholder {
 }
 
 .comments ul.dividedList>li {
-	background: transparent; //$C_collectionBGLight
+	background: transparent; //$C_collectionBG
 }
-.mem-photo-background-60, .mem-photo-background-45 {
-	border-radius: 999px;
+
+.button.small.j-submit-comment {
+	font-size: $font-size-small;
+	margin-bottom: 0;
+	min-height: auto;
+	padding: $space-quarter $space-half;
 }
+
+.likeWidget a {
+	background-position: 0 3px;
+}
+
+// .mem-photo-background-60, .mem-photo-background-45 {
+// 	border-radius: 999px;
+// }
 
 //
 // Member list
 //
+.rsvp-tools {
+	padding-bottom: 0;
+}
+
+.event-attendees h3 {
+	@extend %text--big;
+}
+
+#rsvpBox h3, 
+#updateRsvp h3 {
+	@extend %text--big;
+	padding-bottom: $space-half;
+}
+
 .full-attendee-list {
 	.dividedList>li {
 		border-top: none;
@@ -72,42 +267,126 @@ textarea::-webkit-input-placeholder {
 	border-radius: 0;
 }
 
+// g2cu button
+#eventdets .gtsy .D_submit {
+	display: inline-flex;
+	width: 100%;
+	font-size: $font-size-small;
+	line-height: initial;
+	min-height: 0;
+	padding: $space-quarter;
+	text-align: initial;
+}
 
-#eventdets .event-attendee-section {
-	.line {
-		display: flex;
-		align-items: center;
-		.unit {
-			width: auto;
-		}
-		.size5of7 {
-			flex: 1 0 100%;
-		}
-	}
-	.rsvp-list-content {
-		margin: 0;
-		line-height: inherit;
-	}
-	.mem-photo-small {
-		border-radius: 999px;
-		margin-bottom: 0;
+#rsvp-list .status-badge.yes {
+	background: initial;
+}
+
+a.D_inlineAction:link, a.D_inlineAction:visited {
+	color: $C_textSecondary;
+	font-size: $font-size-small;
+	font-weight: $W_normal; 
+}
+
+.D_inlineAction a:hover, a.D_inlineAction:hover {
+	color: $C_link;
+}
+
+
+// #eventdets .event-attendee-section {
+// 	.line {
+// 		display: flex;
+// 		align-items: center;
+// 		.unit {
+// 			width: auto;
+// 		}
+// 		.size5of7 {
+// 			flex: 1 0 100%;
+// 		}
+// 	}
+// 	.rsvp-list-content {
+// 		margin: 0;
+// 		line-height: inherit;
+// 	}
+// 	.mem-photo-small {
+// 		border-radius: 999px;
+// 		margin-bottom: 0;
+// 	}
+// }
+
+#eventdets .rsvp-introBlurb {
+	font-size: $font-size-small;
+	padding-left: initial;
+}
+
+.event-attendees li .line:hover {
+	h5 a {
+		color: $C_link;
 	}
 }
 
 .member-name {
 	color: $C_textPrimary;
-	display: inline-block;
-	font-size: 16px;
-	font-weight: 400;
-	& + h6 {
+
+	a {
+		color: $C_textPrimary;
+	}
+
+	& ~ h6 {
 		color: $C_textSecondary;
-		display: inline-block;
-		&:before {
-			content: '- ';
+		display: inline;
+		// font-weight: $W_normal;
+
+		&:last-of-type:after {
+			display: none;
+		}
+
+		&:after {
+			content: ', ';
 		}
 	}
 }
 
-.rsvp-introBlurb h6:nth-child(n+3) {
-	display: none;
+#eventdets .rsvp-list-content {
+	margin: initial;
+	line-height: $line-height-smallText;
 }
+
+#edit-bio-link-section {
+	margin: $space-half 0;
+}
+
+span.status-badge {
+	margin-right: $space-half;
+}
+
+.status-badge {
+	font-size: 13px;
+	line-height: initial;
+	text-transform: none;
+
+	&.yes {
+		color: $C_textPrimary;
+	}
+
+	&.no {
+		color: $C_attention;
+	}
+}
+
+// RSVP flow
+.rsvpFlow {
+	h3 {
+		@extend %text--big;
+		margin-bottom: initial;
+	}
+
+	.questions .question-label {
+		line-height: $line-height;
+		padding-bottom: 0;
+	}
+}
+
+// .rsvp-introBlurb h6:nth-child(n+3) {
+// 	display: none;
+// }

@@ -5,6 +5,20 @@ html body {
 	}
 }
 
+#mainNav {
+	#logo {
+		padding-top: $space-half !important;
+	} 
+
+	.mainNav-item--findStart {
+		padding: $space 0 0 $space !important;
+	}
+
+	.C_topBig {
+		font-size: $font-size-big;
+	}
+}
+
 //
 // top nav
 
@@ -42,6 +56,10 @@ html>body #C_headerBody {
 	padding: $space;
 }
 
+.docSection .margin-bottom:only-child {
+	margin-bottom: 0;
+}
+
 .leading-bottom {
 	padding-bottom: $space;
 }
@@ -58,15 +76,173 @@ html>body #C_headerBody {
 	margin-top: $space;
 }
 
-// buttons
+.gutter-right {
+	margin-right: $space;
+}
 
+.docSection {
+	padding: $space;
+}
+
+.dividedList>li {
+	padding: $space  0 0;
+}
+
+.figureset-description {
+	padding-left: $space;
+}
+
+.line-gutters {
+	margin-bottom: $space;
+	margin-right: -#{$space};
+}
+
+.line-gutters>.unit, 
+.line-gutters>.lastUnit {
+	padding-right: $space;
+}
+
+.paddingRight--half {
+	padding-right: $space-half;
+}
+
+.marginBottom--half {
+	margin-bottom: $space-half;
+}
+
+input.D_submit_grad.primary {
+	margin-bottom: initial !important;
+}
+
+// p, ul, ol, blockquote, form, fieldset, legend, table, dl, dd, article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, pre {
+// 	margin-bottom: initial;
+// }
+
+//
+// buttons
+// - commented out to see how much Adam D already handled in Chapstick 
+//
+
+/*
 // buttons - regular
-.button, button, input[type=submit], .metaButton {
+.button, button, input[type=submit] {
 	@include notSQ_button;
 }
 // buttons - primary
+.button--primary,
 #C_pageBody .D_submit, #C_pageBody .D_submit_grad, #C_pageBody .primary, #themePickerControls .primary, #C_pageBody .button.primary, #themePickerControls .button.primary, #C_pageBody .button--primary, #themePickerControls .button--primary, #C_pageBody input[type="submit"].primary, #themePickerControls input[type="submit"].primary, #C_pageBody input[type="submit"].button--primary, #themePickerControls input[type="submit"].button--primary {
 	@include notSQ_button--primary;
+}
+*/
+
+//
+// segmented controls
+//
+
+// Newer
+.nav-buttons {
+	border: 1px solid $C_border;
+
+	.selected {
+		background: $C_highlight;
+	}
+
+	li:first-child>a.selected,
+	li>a.selected,
+	li:first-child>span.selected,
+	li>span.selected,
+	li.selected>a, 
+	li.selected>span {
+		background-color: $C_highlight !important;
+		color: $C_link !important;
+		font-weight: $W_medium;
+		border: initial;
+		box-shadow: initial;
+	}
+}
+
+.nav-buttons label, .nav-buttons li>a, .nav-buttons li>span, .segmented-control-button {
+	background: initial;
+	color: $C_textPrimary;
+	&:hover {
+		background: $C_highlight;
+	}
+}
+
+.nav-buttons li>a:active,
+#simple-event-filter span:active {
+	background: $C_highlight !important;
+}
+
+// Used in desktop RSVP flow
+.segmented-control-input {
+	@include a11yVisibility('hidden');
+}
+
+.segmented-control-input:checked+.segmented-control-button {
+	background-color: $C_highlight !important;
+	color: $C_link !important;
+	font-weight: $W_medium;
+}
+
+// Ancient - used in MUG Stats
+.D_listControls {
+	background: initial;
+	border-bottom: initial;
+	border-right: initial;
+	border-top: initial;
+	margin: initial;
+}
+
+.D_listControl {
+	border-left: initial;
+	line-height: initial;
+	padding: initial;
+	min-height: initial;
+	margin-right: $space;
+	
+	&:last-child {
+		margin-right: $space;
+	}
+}
+
+.D_listControls_compact .D_listControl label {
+	line-height: initial;
+	margin-bottom: $space-quarter;
+}
+
+.D_listControl .contextual, .D_listControl label {
+	font-size: $font-size-small;
+}
+
+.D_listControls_compact .D_listControl .D_radio {
+	line-height: initial !important;
+}
+
+.D_radio {
+	border: 1px solid $C_border;
+	border-radius: $defaultRadius;
+
+	a {
+		background: initial;
+		border-right: 1px solid $C_border;
+		color: $C_textPrimary !important;
+		font-size: initial;
+		text-transform: none;
+		font-weight: $W_medium;
+		padding: $space-half;
+
+		&:last-child {
+			border-right: none;
+		}
+
+		&.selected {
+			background: $C_highlight;
+			color: $C_link !important;
+			cursor: default !important;
+			font-weight: $W_medium;
+		}
+	}
 }
 
 //
@@ -81,12 +257,12 @@ $_tabBorder: 4px;
 	display: block;
 
 	li {
+		border-bottom: $_tabBorder solid transparent;
 		color: $C_textSecondary;
-		padding: 0;
-		margin: 0 0 0 $space;
 		cursor: pointer;
 		display: inline-block;
-		border-bottom: $_tabBorder solid transparent;
+		margin: 0 0 0 $space;
+		padding: 0;
 
 		&:first-child {
 			margin-left: 0;
@@ -108,6 +284,10 @@ $_tabBorder: 4px;
 			font-weight: $W_medium;
 			border-bottom: $_tabBorder solid $C_link;
 		}
+	}
+
+	+ p {
+		margin-top: $space;
 	}
 }
 
@@ -149,4 +329,212 @@ $_tabBorder: 4px;
 // typography
 .small, small {
 	@extend %text--small;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding-bottom: initial;
+}
+
+.D_empty {
+	color: $C_textSecondary;
+}
+
+.D_boxfoot {
+	padding: $space;
+	border-top: 1px solid $C_border;
+	font-weight: initial;
+	font-size: initial;
+}
+
+%notSQ_link--hover,
+.link--hover {
+	color: $C_textPrimary !important;
+	a { color: $C_textPrimary !important; }
+	&:hover, &:hover a {
+		color: $C_link !important;
+	}
+}
+
+// forms
+div.D_form {
+
+	h3 {
+		@extend %text--big;
+		background: initial;
+		border: initial;
+		color: $C_textPrimary;
+		margin-bottom: initial;
+		padding: 0;
+	}
+
+	.element, .multi-elements {
+		border-bottom-color: rgba(0,0,0,0.12);
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+
+		// hacky way of hiding bottom border on Report and Settings/Member Roles
+		&.element_lastInGroup {
+			border-bottom-width: 0;
+		}
+
+		& ~ .leading-top {
+			border-top: 2px solid white;
+			top: -1px;
+			position: relative;
+		}
+	}
+
+	.margin-bottom, .element > .input > input, .element > .input > div > input {
+		margin-bottom: initial;
+	}
+
+
+	// input:not([type="radio"]),
+	// input:not([type="checkbox"]),
+	input[type="text"] {
+		margin-bottom: $space;
+	}
+
+	.textInputTip.ghost {
+		color: $C_textTertiary;
+	}
+
+	.elementGroup {
+
+		.element {
+			margin-left: initial;
+			margin-bottom: $space;
+		}
+
+		h3 {
+			@extend %text--big;
+			background: $C_collectionBG;
+			border: initial;
+			color: $C_textPrimary;
+			margin: 0 -#{$space};
+			padding: $space-quarter $space;
+		}
+	}
+	// h3 {
+	// 	@extend %text--big;
+	// }
+
+	.element .label label {
+		display: initial;
+		font-size: $font-size-small;
+		word-wrap: initial;
+		//@extend %text--big;
+	}
+
+	div.input {
+		margin-top: initial;
+
+		label {
+			font-size: $font-size-small;
+		}
+	}
+}
+
+input, select, textarea {
+	padding: $space-half;
+}
+
+.disabled {
+	background-color: initial;
+	border-color: initial;
+	color: initial;
+	opacity: 0.4; //taking opacity from $C_dimmingOverlay;
+}
+
+div.disabled, span.disabled {
+	background-color: transparent;
+}
+.docSection .error .input p.error, .profileBlock .error p.error, .pastDue p.error, .error p.error, .error, p.error {
+	color: $C_attention;
+}
+
+p.error {
+	font-size: $font-size-small;
+}
+
+.docSection .error .input, .profileBlock .error .input, .pastDue, .D_form .error .input, .bigError, li.error {
+	background: initial;
+}
+
+.error input[type="text"] {
+	border-color: $C_attention;
+}
+
+.error {
+
+	&.docBox {
+		border: 1px solid $C_attention !important;
+	}
+
+	.docSection {
+		background-color: desaturate(lighten($C_attention, 38%), 9%) !important;
+
+		h2 {
+			color: $C_attention !important;
+			@extend %text--display3;
+		}
+	}
+}
+
+.fieldError {
+	font-size: $font-size-small;
+	font-style: initial;
+	color: $C_attention;
+}
+
+.D_searchBar input.text, .D_memberLiveSearch {
+	background-position: initial;
+	background-repeat: initial;
+	line-height: $line-height;
+	padding: $space-half;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	+ label {
+		font-weight: $W_normal;
+	}
+}
+
+.D_boxsection div.D_form {
+	margin-top: -#{$space};
+}
+
+input.hint-text {
+	color: $C_textHint;
+}
+
+.redactor_box {
+	border: 1px solid $C_border;
+}
+
+.redactor_toolbar {
+	border-bottom: 1px solid $C_border;
+}
+
+div.D_form .element .label .explain, .explain {
+	@extend %text--caption;
+	margin: $space-half 0;
+}
+
+.skull_select {
+	border: 1px solid $C_border;
+
+	.D_dropdownContent {
+		border: 1px solid $C_border;
+		box-shadow: 0 0 2px 0 $C_border, 2px 2px 4px 0 $C_border;
+	}
+}
+
+.D_standOut {
+	font-weight: $W_normal;
+}
+
+.D_standOut, .requiredMark, .required {
+	color: $C_attention !important;
 }
