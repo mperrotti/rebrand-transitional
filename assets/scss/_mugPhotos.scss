@@ -1,0 +1,187 @@
+//
+// Photos
+//
+.doc-controls {
+	background: $C_contentBG;
+	padding: initial;
+
+	h4 {
+		font-weight: $W_normal;
+	}
+
+	.nav-buttons {
+		margin-bottom: initial;
+	}
+}
+
+.photoBox {
+	.docSection:first-child {
+		display: flex;
+		h1 {
+	
+			flex-grow: 1;
+			padding-bottom: initial;
+		}
+		h1 + ul {
+			@include notSQ_valign--middle;
+			margin-bottom: initial;
+		}
+	}
+}
+
+.nametag-photo {
+	width: initial;
+}
+
+.D_groupList_photos {
+	.unit {
+		a {
+			color: $C_textPrimary;
+			font-weight: $W_medium;
+		}
+
+		p {
+			margin-bottom: initial;
+		}
+
+		h4 {
+			padding-bottom: initial;
+
+			~ div,
+			~ p {
+				font-size: $font-size-small;
+			}
+		}
+	}
+}
+
+//
+// Photo details
+//
+#D_photoBox {
+	h3 {
+		font-size: $font-size;
+		font-weight: $W_normal;
+	}
+	h1 {
+		@extend %text--display3;
+	}
+}
+
+#D_photoGallery_currentPhotoCounter {
+	font-size: $font-size-small;
+}
+
+#D_photoGallery_actions {
+	color: $C_textPrimary;
+	font-size: initial;
+	padding: 0;
+	float: left;
+	margin-top: initial;
+
+	li {
+		border-left: 1px solid $C_border;
+	}
+
+	a {
+		color: initial;
+		font-size: $font-size-small;
+		text-transform: initial;
+		
+		&:hover {
+			color: $C_link;
+		}
+	}
+}
+
+#D_photoGallery_actions_container {
+	width: initial;
+}
+
+.D_shareThis {
+	background: none;
+	border: none;
+	font-size: initial;
+	margin: initial;
+	text-transform: initial;
+
+	br, img {
+		display: none !important;
+	}
+	
+	a {
+		color: $C_textPrimary !important;
+		display: inline-block !important;
+		font-size: $font-size-small !important;
+		font-weight: $W_normal;
+		padding: 0;
+	}
+}
+
+.D_shareThis:hover span, .D_shareThis:hover a {
+	color: $C_link;
+	text-decoration: underline;
+}
+
+#shareThis .drop_down {
+	background-position: 107% -216px !important;
+	padding: 0 $space 0 0;
+}
+
+.D_photoShare {
+	top: 7px;
+}
+
+#D_photoGallery_photoCaptionWrapper {
+	font-size: initial;
+	font-style: initial;
+	margin-bottom: $space;
+}
+
+#D_photoGallery_photoCaption {
+	display: block;
+}
+
+#D_photoGallery_deleteCaptionLink, #D_photoGallery_editCaptionLink {
+	color: $C_textSecondary;
+	font-style: initial;
+	font-size: $font-size-small;
+	font-weight: $W_normal;
+	margin-right: 4px;
+	padding-left: initial;
+}
+
+#D_photoTasks .D_tagThisPhoto {
+	background-color: initial;
+	background-position: 0px -2px;
+	border-radius: initial;
+	-moz-border-radius: initial;
+	-webkit-border-radius: initial;
+	color: $C_link !important;
+	font-size: initial;
+	padding: 0px 0px 0px 23px;
+	text-transform: initial;
+	text-decoration: none;
+}
+
+#D_photoGallery_commentsFormWrapper {
+	margin-top: $space;
+	padding-bottom: initial;
+
+	h3 {
+		font-size: $font-size-small;
+		font-weight: $W_medium;
+		margin: initial;
+	}
+
+	textarea {
+		border: 1px solid $C_border;
+	}
+}
+
+#D_photoGallery_otherGalleries h2 {
+	@extend %text--big;
+	ul.D_actions {
+		margin: initial;
+	}
+}

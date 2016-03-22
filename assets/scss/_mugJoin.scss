@@ -1,0 +1,51 @@
+//
+// Join flow
+//
+.doc-box.transparent-box {
+	background-color: transparent;
+	border: none !important;
+	box-sizing: border-box;
+}
+
+.groupProfile h1 {
+	@extend %text--display2;
+}
+
+// Topic picking on joining a group
+.selection_array {
+
+	.category .count {
+		background-color: $C_link;
+	}
+
+	.topic.selected {
+		background-color: $C_contentBGInverted;
+
+		.selection {
+			background-color: $C_link;
+			border-color: $C_link;
+
+			&:hover {
+				background-color: transparentize($C_link, .13);
+			}
+		}
+	}
+
+	.category.open .category-name {
+		background: $C_contentBGInverted;
+		border: 1px solid $C_contentBGInverted;
+		border-bottom-color: $C_contentBGInverted;
+	}
+
+	.category .topics .inner {
+		background: $C_contentBGInverted;
+	}
+
+	.topic .selection {
+		background: $C_borderInverted;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}

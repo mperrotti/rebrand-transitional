@@ -1,0 +1,61 @@
+//
+// Calendar
+//
+ul.D_actions li.canDo {
+	font-size: $font-size-small;
+}
+
+.D_calendar tbody td.real .meetup {
+	background: transparent;
+	color: $C_link;
+	font-size: $font-size-small;
+	padding: 0;
+}
+
+.D_calendar .eventContent {
+	padding: 0;
+	line-height: $line-height;
+}
+
+.D_calendar tbody td.real .meetup a.url {
+	color: $C_link !important;
+}
+
+.D_calendar tbody td.real.past .meetup a.url {
+	color: $C_textPrimary !important;
+}
+
+.D_calendar tbody td.real .rsvpState {
+	text-align: left;
+}
+
+.D_calendar tbody td.real .meetup a.rsvpLink {
+	color: $C_textSecondary !important;
+}
+
+.D_calendar tbody td.today .day .dayActions {
+	right: 0;
+	top: 0;
+}
+
+.D_calendar .day div {
+	display: inline-block;
+}
+
+.today .dayNum {
+	background: $C_contentBGInverted;
+	color: $C_textPrimaryInverted !important;
+	padding: $space-quarter;
+	line-height: $line-height;
+}
+
+.D_feedBox {
+	background: initial;
+	font-size: $font-size;
+	margin: initial;
+	padding: initial;
+
+	.D_icon {
+		display: none;
+	}
+}

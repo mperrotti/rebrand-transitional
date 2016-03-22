@@ -1,0 +1,78 @@
+//
+// Topic picking after leaving a group
+//
+.topicpicker-dialog-header {
+	@extend %text--big;
+	margin-bottom: initial;
+}
+
+.topicpicker-dialog-contents .text {
+	@extend %text--small;
+	margin-bottom: $space;
+	margin-top: initial;
+}
+
+.prepend-button {
+	background: transparent;
+	border: 1px solid $C_border;
+
+	&:hover {
+		background: $C_selection;
+		border: 1px solid $C_border;
+		text-shadow: initial;
+	}
+
+	.icon {
+		background-position: -1px -123px;
+	}
+
+	&.hasSubscribed {
+		background-color: $C_collectionBG;
+		border: 1px solid $C_border;
+
+		&:hover,
+		&:link,
+		&:visited{
+			color: $C_textPrimary;
+			font-weight: $W_medium;
+		}
+
+		&:hover {
+			background: $C_selection;
+			border: 1px solid $C_border;
+			text-shadow: initial;
+
+			.icon {
+				background-position: -1px -38px;
+			}
+		}
+
+		.prepend-button-label {
+			color: $C_textPrimary;
+			font-weight: $W_medium;
+		}
+
+		.icon {
+			background-position: -1px -1px;
+		}
+
+	}
+}
+
+.prepend-button-addon {
+	border-width: 0;
+	left: initial;
+	right: 0;
+}
+
+.prepend-button-label {
+	font-size: $font-size-small;
+	font-weight: $W_normal;
+	line-height: $line-height-smallText;
+	margin: 0 0 0 $space-quarter;
+	padding: $space-quarter;
+}
+
+.prepend-button:link, .prepend-button:visited, .prepend-button:hover {
+	color: $C_textPrimary;
+}

@@ -1,0 +1,16 @@
+//
+// Message boards
+//
+#D_forumDisplay .discussion .title h3 {
+	@extend %text--big;
+}
+#D_forumDisplay .discussion .accessLevelDisplay {
+	margin-bottom: $space-half;
+}
+#D_forumDisplay .discussion .accessLevelDisplay .everybody, #D_forumDisplay .discussion .accessLevelDisplay .groupOnly, #D_forumDisplay .discussion .accessLevelDisplay .orgOnly {
+	background: initial;
+	color: $C_attention;
+	font-size: $font-size-small;
+	font-weight: $W_normal;
+	padding: initial;
+}

@@ -1,0 +1,16 @@
+//
+// MUP create
+//
+#event_create-view {
+	.doc-content {
+		padding: $space-half $space;
+	}
+}
+
+#addEvent {
+	.enabler .touchList-label--input {
+		padding-top: initial;
+		padding-bottom: initial;
+		padding-left: initial;
+	}
+}

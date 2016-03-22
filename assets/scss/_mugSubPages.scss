@@ -1,0 +1,51 @@
+//
+// Other pages
+//
+
+.chapterSubPage h1 {
+	@extend %text--display2;
+	flex-grow: 1;
+	line-height: $line-height-largeText;
+	margin-bottom: initial;
+}
+
+#C_document.chapterSubPage {
+	.docSection, .doc-content {
+		&:first-child {
+			display: flex;
+			flex-wrap: wrap;
+			p {
+				width: 100%;
+			}
+		}
+		&:only-child {
+			display: block;
+		}
+	}
+
+	h1 {
+		@include notSQ_valign--middle;
+		flex-grow: 1;
+
+		& + ul {
+			@include notSQ_valign--middle;
+			padding-top: initial;
+			margin-bottom: initial;
+		}
+	}
+}
+
+// undo the above code on main MUG home
+#urf-chapter-description, #join-or-connect-v2, #private-mug-urf, #eventdets {
+	.docSection, .doc-content {
+		display: block !important;
+	}
+}
+
+.canDo {
+	margin-right: $space;
+
+	&:last-child {
+		margin-right: initial;
+	}
+}

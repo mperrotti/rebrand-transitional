@@ -1,0 +1,33 @@
+//
+// Stats
+//
+.explainHighlight {
+	background-color: initial;
+	border-bottom: 1px solid $C_border;
+	color: $C_textSecondary;
+	margin: initial;
+	padding: $space-half;
+	p {
+		background-image: initial;
+		margin-bottom: initial;
+		padding: 0 !important;
+	}
+}
+
+.chapterSubPage .D_boxhead .D_actions .sprite_pixel {
+	height: 0;
+	width: 0;
+}
+
+.chapterSubPage .explainHighlight + .D_boxhead {
+	display: flex;
+	
+	h1 {
+		@include notSQ_valign--middle;
+		flex-grow: 1;
+	}
+}
+
+#chart_div {
+	margin-top: $space;
+}

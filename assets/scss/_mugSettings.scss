@@ -1,0 +1,223 @@
+//
+// MUG settings
+//
+.D_name + p,
+.D_name + ul {
+	color: $C_textSecondary;
+}
+
+// Settings/Basic
+.D_urlPreview span {
+	font-weight: initial;
+	font-size: initial;
+	color: initial;
+	line-height: initial;
+}
+
+// Settings/Members
+input[type="checkbox"] + label {
+	vertical-align: middle;
+}
+
+#D_profileQuestions {
+
+	li {
+		background: $C_contentBG;
+		border: 1px solid $C_border;
+		border-radius: $defaultRadius;
+		padding: $space;
+	}
+
+	.number {
+		font-size: $font-size;
+	}
+
+	.actions {
+		left: initial;
+		right: 0;
+	
+		a {
+			color: $C_textPrimary;
+			font-size: $font-size-small;
+			font-weight: $W_normal;
+		}
+	}
+} 
+
+// Settings/Topics
+.T_chunky-ui-thing {
+	background: $C_contentBG;
+	border: 1px solid $C_border;
+	border-radius: $defaultRadius;
+	padding: $space-half;
+
+	.chunky-thing-head,
+	.chunky-thing-body {
+		font-size: $font-size;
+		margin: initial;
+		padding: initial;
+	}
+}
+
+.D_group-topic .topic-stat {
+	font-size: $font-size;
+	padding: initial;
+}
+
+.topic-stat-groups {
+	background: initial;
+}
+
+.suggested-topics {
+	line-height: $line-height;
+}
+
+.topic-sugg {
+	.topic-name {
+		margin-bottom: initial;
+		line-height: $line-height;
+	}
+	.add-topic {
+		text-align: initial;
+	}
+}
+
+.suggested-topic-cols {
+
+	.D_colbody {
+		margin: initial !important;
+	}
+
+	.divby3 {
+		margin-bottom: $space;
+
+		.D_col {
+			width: 100%;
+		}
+	} 
+
+	.topic-sugg {
+		border-bottom: 1px solid $C_border;
+		margin-top: $space-half;
+		padding: initial;
+
+		.topic-sugg-body {
+			background: transparent !important;
+			border-radius: initial;
+			margin: 0 0 $space-half 0;
+			padding: initial;
+		}
+	}
+}
+
+#addAnotherTopicBtn {
+	float: initial;
+	padding: initial;
+	border: initial;
+	font-size: initial;
+	opacity: initial;
+	-moz-opacity: initial;
+	margin-top: initial;
+
+	div {
+    background: initial;
+		color: $C_link;
+    font-weight: initial;
+    padding-left: initial;
+    text-align: initial;
+	}
+}
+
+.D_group-topic .topic-field input {
+	border: initial;
+	box-shadow: none;
+	padding: initial;
+	margin: initial;
+	font-weight: initial;
+	font-size: initial;
+	line-height: initial;
+	width: 100%;
+}
+
+#D_group-topics-verbs .topic-entry .topic-field, 
+.D_group-topic .topic-field {
+	border: initial;
+	padding: initial;
+	background-color: initial;
+	margin: initial;
+}
+
+.topic-action-link {
+	color: $C_link;
+	text-decoration: none;
+}
+
+.D_features {
+	padding: initial;
+
+	li {
+		background: initial !important;
+		margin: initial;
+		margin-bottom: $space-half;
+		padding: initial !important;
+	}
+}
+
+// Settings/Venues
+#addvenue li.vinfo label {
+	float: initial;
+	line-height: $line-height;
+	margin-right: initial;
+}
+
+form[name="editVenue"] .footElement {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+}
+
+//
+// Settings/Member roles
+//
+.leadership-title {
+	@extend %text--big;
+}
+
+#leadershipname {
+	color: $C_textPrimary;
+
+	&:hover {
+		border-color: $C_link;
+		color: $C_link;
+	}
+}
+
+//
+// Settings/Optional features
+//
+label[for="fee_currency"] {
+	// would be better to just remove `inline` class
+	display: block;
+	select {
+		display: block;
+	}
+}
+
+//
+// Settings/Money/Contributions
+//
+#contributions .ruleRed {
+	display: none;
+}
+
+.faq {
+	dt {
+		padding: $space;
+	}
+	dd {
+		padding: 0 0 $space $space;
+		width: 100%;
+	}
+}

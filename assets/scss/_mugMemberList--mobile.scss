@@ -1,0 +1,50 @@
+//
+// Member list
+//
+
+// kill the sort animation
+.ani-flip-in, .member-list.trigger-sort-anim .apply-sort-anim--show {
+	@include animation-name(fade-in);
+}
+
+.ani-flip-out, .member-list.trigger-sort-anim .apply-sort-anim--hide{
+	@include animation-name(fade-out);
+}
+
+.member-list.trigger-sort-anim .apply-sort-anim--hide {
+	border-bottom: 1px solid $C_border;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes -webkit-fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes -webkit-fade-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

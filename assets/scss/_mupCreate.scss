@@ -1,0 +1,114 @@
+//
+// MUP create
+//
+div.D_form .toggleGroup {
+	overflow: visible;
+
+	.elementGroupHeader {
+		background-color: $C_collectionBG;
+		border: initial;
+		padding: $space-half $space;
+		margin: 0 -#{$space} $space-half -#{$space};
+		overflow: hidden;
+		width: initial;
+
+		h3 {
+			@extend %text--big;
+			padding-left: $space;
+			color: initial;
+		}
+	}
+} 
+
+a.button.primary.add-venue {
+	font-size: $font-size-small !important;
+	margin-right: $space-half !important;
+	padding: $space-quarter $space-half;
+	min-height: $space-2;
+}
+
+#hostList td.input {
+	width: 1%;
+}
+
+#autosched_choices {
+	margin-bottom: $space;
+
+	.D_radio {
+		border: initial;
+		margin-right: $space;
+	}
+
+	.D_radio a, .D_radio .D_radioInner {
+		display: initial;
+		border-right: initial;
+		background: initial;
+		font-size: initial;
+		padding: initial;
+		color: initial;
+		margin: initial;
+	}
+
+	.D_radio a.selected, .D_radio .selected {
+		font-weight: initial;
+		color: initial;
+		background: initial;
+
+		label {
+			font-weight: $W_medium;
+		}
+	}
+}
+
+.venue-list {
+	.venue-toggler {
+		background: initial;
+		border-bottom: initial;
+		display: block;
+		list-style: none;
+		margin: initial;
+		margin-bottom: $space;
+		padding: initial;
+
+		.venue-toggle {
+			background: initial;
+			color: $C_textSecondary;
+			border: initial;
+			border-bottom: $_tabBorder solid transparent;
+			cursor: pointer;
+			display: inline-block;
+			font-size: initial;
+			font-variant: initial;
+			line-height: initial;
+			margin: 0 $space 0 0;
+			padding: 0;
+			text-align: initial;
+			text-transform: initial;
+
+			&.selected {
+				color: $C_link;
+				font-weight: $W_medium;
+				border-bottom: $_tabBorder solid $C_link;
+			}
+		}
+	}
+}
+
+#feeWrap, #refundPolicy {
+	border-top: 1px solid $C_border;
+	padding-top: $space;
+}
+
+.footElement.event-submit-button-wrapper {
+	text-align: right;
+	padding-top: initial !important;
+
+	#event-draft {
+		margin-right: $space !important;
+	}
+
+	.D_altAction {
+		float: left;
+		line-height: 2; // sad attempt at vertical alignment
+	}
+}

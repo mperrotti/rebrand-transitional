@@ -1,0 +1,64 @@
+.nav-appendPager {
+	background-color: transparent;
+	border: none;
+	font-size: $font-size;
+	letter-spacing: initial;
+}
+
+//
+// Groups
+//
+.startGroupCard .groupCard--photo {
+	background: transparent;
+	border: 1px dashed $C_border;
+	h3 {
+		font-weight: $W_medium;
+	}
+}
+.groupResults-sectionHeader {
+	@extend %text--labelSecondary;
+	padding-top: 0;
+	
+	// this should get moved to %text--labelSecondary
+	text-transform: uppercase;
+	font-weight: $W_medium;
+}
+
+#groups {
+	.nametag-photo-name {
+		@include flexParent('column');
+		@include flex-wrap('nowrap');
+		height: 100%;
+		padding: $space-half;
+		text-align: left;
+
+		h3 {
+			@extend %_columnItemBase;
+			@extend %text--heavy;
+			@include flex-grow(1);
+
+			@include browser-lessThanIE(10) {
+				display: table-row;
+				height: auto;
+			}
+		}
+
+		p {
+			@extend %_columnItemBase;
+			@include flex-grow(0);
+
+			@include browser-lessThanIE(10) {
+				height: 1%;
+			}
+		}
+	}
+
+	.groupCard .ellipsize {
+		width: 100%;
+		margin-bottom: initial;
+	}
+}
+
+//
+// Calendar
+//

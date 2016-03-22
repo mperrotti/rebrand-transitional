@@ -1,0 +1,56 @@
+//
+// Sponsors
+//
+#sponsorHead {
+	align-items: center;
+	display: flex;
+	margin-bottom: $space;
+	padding-right: initial;
+
+	h1 {
+		padding-bottom: initial;
+    flex-grow: 1;
+	}
+}
+
+#addSponsor {
+	position: initial;
+	right: initial;
+	top: initial;
+}
+
+#sponsors-list {
+
+	.D_sponsorRow {
+		margin-bottom: $space;
+		
+		h3 {
+			@extend %text--big;
+			padding-bottom: initial;
+			margin-bottom: initial;
+		}
+
+		.figureset-figure,
+		.figureset-description {
+			@include notSQ_valign--middle;
+		}
+
+		.figureset-figure {
+			width: 120px;
+			img {
+				margin-bottom: initial;
+				max-width: 100%;
+			}
+		}
+
+		.figureset-description p {
+			margin-bottom: 0;
+			
+			// lol, this is so fucked
+			& + .margin-bottom {
+				margin-bottom: initial;
+				margin-top: 8px;
+			}
+		}
+	}
+}

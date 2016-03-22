@@ -2,13 +2,17 @@
 	margin-bottom: $space;
 }
 
-// tabs
+//
+// Tabs
+//
 #event-page .nav-tabs {
 	padding-left: $space;
 	padding-right: $space;
 }
 
+//
 // RSVP status and invite btn
+//
 .rsvpBanner-inviteBtn {
 	background: $C_contentBG !important;
 	color: $C_textPrimary !important;
@@ -32,7 +36,9 @@ h3.banner-text {
 	text-align: center;
 }
 
+//
 // Rating
+//
 #event-page	{
 	.star-rating {
 		padding-top: 0;
@@ -40,7 +46,9 @@ h3.banner-text {
 	}
 }
 
+//
 // Discussions
+//
 #event-page {
 
 	.j-mute {
@@ -72,8 +80,9 @@ h3.banner-text {
 	border-color: transparent;
 }
 
-
-// member list
+//
+// Attendee list
+//
 .touchList {
 
 	.touchList-attendee-name {

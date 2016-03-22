@@ -1,0 +1,6 @@
+//
+// Photos
+//
+#albumListView .stripe--overlap--collection:before, #albumDetailView .stripe--overlap--collection:before {
+	border-bottom: 24px solid $C_collectionBG;
+}

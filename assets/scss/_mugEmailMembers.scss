@@ -1,0 +1,37 @@
+//
+// Email members
+//
+.D_box {
+	border: 1px solid $C_border;
+	padding: initial;
+
+	h1 {
+		@extend %text--display3;
+	}
+
+	h3 {
+		@extend %text--big;
+	}
+
+}
+
+.D_boxhead,
+.D_boxsection {
+	padding: $space;
+}
+
+.D_boxbody {
+	margin: 0;
+	padding: 0;
+}
+
+.D_boxsection {
+	border-top: 1px solid $C_border;
+}
+
+.D_tip, 
+.D_inform {
+	@extend %text--caption;
+	background: initial;
+	padding: 0;
+}

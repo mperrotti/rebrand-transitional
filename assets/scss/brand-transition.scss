@@ -2,13 +2,13 @@
 // IMPORT SOME SASSQUATCH UTILS
 // -----------------------------
 @import '../../bower_components/meetup-swatches/sass/colors';
-@import '../../bower_components/sassquatch2/sass/globals';
+@import "../../bower_components/sassquatch2/sass/globals/prefix";
+@import "../../bower_components/sassquatch2/sass/globals/root-class";
+@import "../../bower_components/sassquatch2/sass/globals/scale";
+@import "../../bower_components/sassquatch2/sass/globals/type";
+@import "../../bower_components/sassquatch2/sass/globals/forms";
+@import "../../bower_components/sassquatch2/sass/globals/layout";
 @import '../../bower_components/sassquatch2/sass/util';
-
-// -----------------------------
-// IMPORT SASSQUATCH
-// -----------------------------
-// @import '../../bower_components/sassquatch2/sass/sassquatch';
 
 // ---------------------------
 // REBRAND IMPORTS
@@ -35,10 +35,36 @@
 // ---------------------------
 // PAGE-SPECIFIC STYLES
 // ---------------------------
+// Find
+@import 'find--mobile';
 @import 'find';
 
+// MUG Home - mobile
 @import 'mugHome--mobile';
-@import 'mugHome';
+@import 'mugPhotos--mobile';
+@import 'mupCreate--mobile';
+@import 'mugMemberList--mobile';
+@import 'mugSettings--mobile';
+@import 'mugJoin--mobile';
 
+// MUG Home - desktop
+@import 'mugHome';
+@import 'mugSubPages';
+@import 'mugCalendar';
+@import 'mugSponsors';
+@import 'mugPhotos';
+@import 'mugMemberList';
+@import 'mugMessageBoards';
+@import 'mugEmailMembers';
+@import 'mugStats';
+@import 'mugSettings';
+@import 'mupCreate';
+@import 'mugJoin';
+@import 'mugLeave-topicPicker';
+
+// MUP Home
 @import 'mupHome--mobile';
 @import 'mupHome';
+
+// Start
+@import 'start';

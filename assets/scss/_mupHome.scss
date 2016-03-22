@@ -1,5 +1,5 @@
 //
-// announce notice
+// Announce notice
 //
 .chapter-alert {
 	background: $C_contentBGInverted;
@@ -74,9 +74,8 @@
 }
 
 //
-// main content area
+// Main content area
 //
-
 #event-title h1 {
 	@extend %text--display2;
 	line-height: $line-height-largeText;
@@ -162,7 +161,9 @@
 	line-height: $line-height;
 }
 
-// past mup
+//
+// Past mup
+//
 #past-event-content {
 	font-size: $font-size;
 	line-height: $line-height;
@@ -186,7 +187,9 @@
 	text-transform: lowercase;
 }
 
-// discussions
+//
+// Discussions
+//
 .talk-heading {
 	@extend %text--big;
 }
@@ -240,7 +243,7 @@ textarea::-webkit-input-placeholder {
 // }
 
 //
-// Member list
+// Attendee list
 //
 .rsvp-tools {
 	padding-bottom: 0;
@@ -291,28 +294,6 @@ a.D_inlineAction:link, a.D_inlineAction:visited {
 .D_inlineAction a:hover, a.D_inlineAction:hover {
 	color: $C_link;
 }
-
-
-// #eventdets .event-attendee-section {
-// 	.line {
-// 		display: flex;
-// 		align-items: center;
-// 		.unit {
-// 			width: auto;
-// 		}
-// 		.size5of7 {
-// 			flex: 1 0 100%;
-// 		}
-// 	}
-// 	.rsvp-list-content {
-// 		margin: 0;
-// 		line-height: inherit;
-// 	}
-// 	.mem-photo-small {
-// 		border-radius: 999px;
-// 		margin-bottom: 0;
-// 	}
-// }
 
 #eventdets .rsvp-introBlurb {
 	font-size: $font-size-small;

@@ -1,0 +1,10 @@
+//
+// Join
+//
+.success-box, .error-box, .doc-box.success-box, .success-box.doc-box--fullWidth, .success-box.navBar-searchWrapper, .success-box.formBlock, .success-box.info-box, .doc-box.error-box, .error-box.doc-box--fullWidth, .error-box.navBar-searchWrapper, .error-box.formBlock, .error-box.info-box {
+	background-position: $space-half $space;
+}
+
+form#profile h3 {
+	display: none;
+}

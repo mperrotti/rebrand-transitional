@@ -8,7 +8,7 @@
 	width: $bounds-wide;
 	text-transform: uppercase;
 	font-weight: $W_medium;
-	background: $C_contentBG;
+	background: $C_collectionBG;
 	box-sizing: border-box;
 	position: relative;
 	top: -$space;
@@ -20,7 +20,7 @@
 		left: .5%;
 		width: 99%;
 		height: 48px;
-		box-shadow: rgba(0,0,0,.12) 0 0 8px, rgba(0,0,0,.26) 0 4px 4px;
+		box-shadow: 0 0 2px 0 $C_border, 0 2px 4px 0 $C_border;
 	}
 }
 
@@ -31,4 +31,53 @@ html body #C_pageBody .searchResults .event-listing .event-title {
 
 .date-indicator {
 	color: $C_textSecondary;
+}
+
+//
+// Calendar
+//
+
+//
+// this code used to move the "today" button inside the calendar 
+// #simple-date-selector .ui-datepicker .ui-datepicker-buttonpane {
+// 	position: absolute;
+// 	right: 28%;
+// 	top: 0;
+
+// 	button {
+// 		min-height: 32px;
+// 		border-radius: 0;
+// 		border-top: 0;
+// 		border-bottom: 0;
+// 	}
+// }
+
+#simple-date-selector .ui-datepicker table .simple-cal-event-day {
+	-webkit-box-shadow: initial;
+	box-shadow: initial;
+}
+
+#simple-date-selector .ui-datepicker table .simple-cal-rsvp-day {
+	-webkit-box-shadow: $C_success 0 -3px 0 0 inset;
+	box-shadow: $C_success 0 -3px 0 0 inset;
+}
+
+#simple-date-selector .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+	border: 1px solid $C_border;
+}
+
+#simple-date-selector .ui-datepicker table {
+	width: 301px;
+}
+
+#simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-prev, #simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-next,
+#simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, #simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+	border-left: 1px solid $C_border;
+}
+
+#simple-date-selector .ui-datepicker table tbody td a:active, #simple-date-selector .ui-datepicker table tbody td a.ui-state-active {
+	background-color: $C_highlight !important;
+	color: $C_link !important;
+	font-weight: $W_medium;
+	box-shadow: initial;
 }

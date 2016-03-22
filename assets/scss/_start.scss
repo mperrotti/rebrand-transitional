@@ -1,0 +1,12 @@
+#create {
+	color: red;
+	input {
+		color: red;
+	}
+}
+#create input::-webkit-input-placeholder {
+	font-variant: normal;
+	text-decoration: none;
+	font-weight: 400;
+	font-style: normal;
+}
