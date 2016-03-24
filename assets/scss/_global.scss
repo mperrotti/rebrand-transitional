@@ -5,6 +5,14 @@ html body {
 	}
 }
 
+// Custom borders from modules
+.actionMenu-actions, 
+.doc-box, 
+.docBox {
+	border: 1px solid $C_border !important;
+	border-bottom: 1px solid $C_textHint !important;
+}
+
 #mainNav {
 	#logo {
 		padding-top: $space-half !important;

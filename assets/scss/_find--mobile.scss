@@ -3,6 +3,10 @@
 	border: none;
 	font-size: $font-size;
 	letter-spacing: initial;
+
+	.doc-content & {
+		margin-bottom: 0;
+	}
 }
 
 //
@@ -15,9 +19,11 @@
 		font-weight: $W_medium;
 	}
 }
+
 .groupResults-sectionHeader {
 	@extend %text--labelSecondary;
 	padding-top: 0;
+	padding-bottom: $space-quarter;
 	
 	// this should get moved to %text--labelSecondary
 	text-transform: uppercase;
@@ -25,12 +31,17 @@
 }
 
 #groups {
+	.doc-content:first-child {
+		border-bottom: 1px solid $C_border;
+	}
+
 	.nametag-photo-name {
 		@include flexParent('column');
 		@include flex-wrap('nowrap');
 		height: 100%;
 		padding: $space-half;
 		text-align: left;
+		text-shadow: 1px 1px 0 $C_textHint;
 
 		h3 {
 			@extend %_columnItemBase;
@@ -46,6 +57,7 @@
 		p {
 			@extend %_columnItemBase;
 			@include flex-grow(0);
+			color: $C_textPrimaryInverted;
 
 			@include browser-lessThanIE(10) {
 				height: 1%;
@@ -53,9 +65,23 @@
 		}
 	}
 
+	.tileGrid_atSmall--1col .nametag-photo-name {
+		padding: $space;
+	}
+
 	.groupCard .ellipsize {
 		width: 100%;
 		margin-bottom: initial;
+	}
+
+	.groupCard--photo {
+		-webkit-filter: grayscale(20%) contrast(110%);
+		filter: grayscale(20%) contrast(110%);
+	}
+
+	.groupCard--gradient {
+		@include linear-gradient(0deg, transparentize($C_scrimGradient, .85) 25%, transparentize($C_scrimGradient, .6) 100%);
+		mix-blend-mode: hard-light;
 	}
 }
 

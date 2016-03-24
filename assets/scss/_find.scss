@@ -1,3 +1,45 @@
+//
+// Logged out banner
+//
+.prebody-doc-box {
+
+	h1 {
+		@extend %text--display1;
+		color: $C_textPrimaryInverted;
+		position: relative;
+		z-index: 1;
+	}
+
+	h2.desc {
+		position: relative;
+		z-index: 1;
+		font-size: $font-size-big;
+		font-weight: $W_normal;
+		line-height: $line-height
+	}
+
+	h1, h2.desc {
+		text-shadow: 1px 1px 0 $C_borderDark;
+	}
+
+}
+
+#what-it-is:after {
+	margin: -260px auto 0 -300px;
+	mix-blend-mode: overlay;
+}
+
+#C_pagePreBody .prebody-credit a {
+	font-size: $W_medium;
+}
+
+#alien-join i {
+	display: none;
+}
+
+//
+// Logged in banner
+//
 #C_pagePreBody .find-navbar {
 	width: $bounds-wide;
 	margin-bottom: $space;
@@ -14,6 +56,7 @@
 	top: -$space;
 }
 .docked-event-date-bg {
+	padding: $space 0 $space-half;
 	width: $bounds-wide;
 	&:after {
 		bottom: 18px;
