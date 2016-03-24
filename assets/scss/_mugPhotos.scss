@@ -132,6 +132,20 @@
 	top: 7px;
 }
 
+#D_photoGallery_pageCounter {
+	border-top: initial;
+	font-size: $font-size-small;
+}
+
+#D_photoGallery_pager {
+	border-bottom: initial;
+	font-size: $font-size-small;
+}
+
+#D_photoGallery_seeAllPhotos {
+	margin-bottom: 0;
+}
+
 #D_photoGallery_photoCaptionWrapper {
 	font-size: initial;
 	font-style: initial;
@@ -176,6 +190,15 @@
 
 	textarea {
 		border: 1px solid $C_border;
+		margin-bottom: $space-half;
+	}
+
+	.D_submit {
+		font-size: $font-size-small;
+		margin-bottom: initial;
+		margin-top: initial;
+		min-height: $media-xs;
+		padding: $space-quarter $space-half;
 	}
 }
 

@@ -28,6 +28,10 @@
 	}
 }
 
+label ~ .D_radio a {
+	font-size: $font-size-small;
+}
+
 #chart_div {
 	margin-top: $space;
 }

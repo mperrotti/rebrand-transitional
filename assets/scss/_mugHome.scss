@@ -355,7 +355,8 @@ html>body .wideContent #C_pageBody,
 		padding: 0;
     margin-bottom: $space;
 
-		.rsvp-callout-rsvp {
+		.rsvp-callout-rsvp,
+		.rsvp-callout-wl {
 			@include notSQ_button;
 			padding-left: initial;
 			padding-right: initial;
@@ -418,6 +419,11 @@ html>body .wideContent #C_pageBody,
 	background: $C_collectionBG;
 	border: 1px solid $C_border;
 	color: $C_textPrimary;
+}
+
+.event-meta .rsvp-callout-outer.rsvp-callout-haveRSVPd .rsvp-callout-rsvpwaitlist {
+	background: $C_contentBGInverted !important;
+	color: $C_textPrimaryInverted !important;
 }
 
 .event-autoscheduleInfo {

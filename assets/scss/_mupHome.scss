@@ -39,7 +39,7 @@
 		@include color-all( $C_textPrimaryInverted );
 		@include notSQ_button--fullWidth;
 		@include notSQ_button--small;
-		background: $C_textHint;
+		background: $C_textHint !important;
 		border: 1px solid $C_borderInverted;
 		border-color: $C_borderInverted;
 		padding: $space-quarter $space-half;
@@ -69,6 +69,24 @@
 		&:focus {
 			background: $C_borderDarkInverted;
 			text-decoration: none;
+		}
+	}
+	&.rsvp-callout-rsvpwaitlist {
+		background: $C_contentBGInverted !important;
+		.rsvp-change {
+			background-color: $C_textHint !important;
+		}
+		.rsvp-inviteBtn {
+			color: $C_textPrimary;
+		}
+	}
+	&.rsvp-callout-rsvpyes {
+		background: $C_success !important;
+		.rsvp-change {
+			background-color: $C_textHint !important;
+		}
+		.rsvp-inviteBtn {
+			color: $C_textPrimary !important;
 		}
 	}
 }
@@ -281,8 +299,8 @@ textarea::-webkit-input-placeholder {
 	text-align: initial;
 }
 
-#rsvp-list .status-badge.yes {
-	background: initial;
+#rsvp-list .status-badge {
+	background: initial !important;
 }
 
 a.D_inlineAction:link, a.D_inlineAction:visited {
@@ -371,3 +389,129 @@ span.status-badge {
 // .rsvp-introBlurb h6:nth-child(n+3) {
 // 	display: none;
 // }
+
+//
+// Attendance modal
+//
+#attendanceWidget {
+	font-size: inherit;
+
+	.D_radio {
+		border: 1px solid $C_border;
+		border-radius: $defaultRadius;
+
+		.D_radioInner {
+			background: initial;
+			border-right: 1px solid $C_border;
+			color: $C_textPrimary !important;
+			font-size: initial;
+			text-transform: none;
+			font-weight: $W_medium;
+			padding: $space-half;
+
+			&:last-child {
+				border-right: none;
+			}
+
+			&.selected {
+				background: $C_highlight;
+				color: $C_link !important;
+				cursor: default !important;
+				font-weight: $W_medium;
+			}
+		}
+
+	}
+}
+
+#J_attendedCountApp {
+	display: inline-block;
+	font-size: $font-size !important;
+	margin: 0 !important;
+	width: auto !important;
+}
+
+#attendanceWidget div.D_radio > div.selected {
+	letter-spacing: initial;
+}
+
+#J_attendeeList div.each_user {
+	border-bottom: 1px solid $C_border !important;
+	padding: $space $space-half !important;
+}
+
+#J_attendanceBase {
+
+	div.headline {
+		line-height: inherit;
+
+		span:first-child {
+			font-size: $font-size-big;
+			font-weight: $W_medium;
+			display: block;
+			margin-bottom: $space;
+		}
+	}
+
+	.updateAutoCount {
+		font-family: inherit !important;
+		font-size: $font-size-small !important;
+		margin-bottom: $space !important;
+		margin-top: initial !important;
+		padding-bottom: initial !important;
+		text-align: left !important;
+	}
+
+	div.filters {
+		background: transparent !important;
+		border: none !important;
+		border-top: 1px solid $C_border !important;
+		padding-top: $space !important;
+
+		.section_action {
+			padding: initial;
+		}
+
+		.section_action_middle {
+			margin-left: $space;
+		}
+
+	}
+
+	.section_action_middle {
+		border: none !important;
+	}
+
+	div.rolodex {
+		border: 1px solid $C_border !important;
+	}
+
+	div.statuses {
+		font-size: $font-size-small !important;
+	}
+
+	div.rsvp {
+		float: initial !important;
+		width: initial !important;
+		margin-right: initial !important;
+		height: initial !important;
+		margin-bottom: initial !important;
+	}
+
+	div.guests {
+		float: initial !important;
+	}
+
+	.J_attendance_url.D_membername {
+		color: $C_textPrimary !important;
+		font-weight: $W_medium !important;
+	}
+
+	#actionFilterName {
+		background: $C_collectionBG;
+		border-bottom: 1px solid $C_border;
+		padding: $space-half;
+		text-align: left;
+	}
+
+} 
