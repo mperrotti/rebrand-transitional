@@ -1,0 +1,16 @@
+.topicHome {
+	
+	.stripe--collection > ul {
+		margin-bottom: 0 !important;
+		padding-bottom: $space;
+	}
+
+	h2.text--headline {
+		@extend %text--big;
+	}
+
+	.groupList-order span.text--headline {
+		@extend %text--display2;
+		line-height: 1;
+	}
+}

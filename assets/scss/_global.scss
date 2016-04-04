@@ -546,3 +546,10 @@ div.D_form .element .label .explain, .explain {
 .D_standOut, .requiredMark, .required {
 	color: $C_attention !important;
 }
+
+.text--display {
+	@extend %text--display1;
+}
+
+
+

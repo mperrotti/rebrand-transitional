@@ -1,0 +1,24 @@
+// Funny way to target the chapter description
+#directory-avatar-container + .stripe {
+	.bounds .text--secondary {
+		color: $C_textPrimary;
+	}
+}
+
+// kill bounds--sideHeader on Pro pages
+#directory-avatar-container ~ .stripe .bounds--sideHeader {
+	padding: 24px 16px 8px;
+	max-width: $bounds;
+
+	.bounds-header {
+		left: initial;
+		position: initial;
+		text-align: initial;
+		top: initial;
+		width: initial;
+		h2 {
+			@extend %text--display3;
+			text-align: center;
+		}
+	}
+}

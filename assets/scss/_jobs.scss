@@ -1,0 +1,10 @@
+.jobsHeading + .button-photo {
+	font-size: $font-size !important;
+	border: 1px solid $C_borderInverted;
+	fill: $C_textPrimary !important;
+	color: $C_textPrimary !important;
+	background: $C_contentBG;
+	&:hover {
+		background: $C_textSecondaryInverted;
+	}
+}

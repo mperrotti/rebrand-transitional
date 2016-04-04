@@ -1,0 +1,193 @@
+//
+// Main profile area
+//
+#D_memberProfileQuestions {
+	border-bottom: none !important;
+	padding: initial !important;
+}
+
+#D_groupMemberProfile {
+
+	h2 {
+		@extend %text--display3;
+	}
+
+	.lcol .inner-col {
+		padding: 0 $space 0 0;
+	}
+
+	#D_memberProfileMeta,
+	#D_memberProfileQuestions,
+	.D_memberProfileContentItem {
+		// padding: initial;
+	}
+
+	.D_actions {
+		margin: $space-quarter 0 0;
+		padding: $space-quarter 0 0;
+	}
+
+	.groupinfo-widget {
+		h4 a,
+		.D_name a {
+			color: $C_textPrimary;
+			font-weight: $W_medium;
+		}
+
+		&:hover h4 a,
+		&:hover .D_name a {
+			color: $C_link;
+		}
+	}
+}
+
+.D_memberProfileSocial .muted {
+	color: $C_textHint;
+}
+
+//
+// MUG listing
+//
+.member-role, .member-role a {
+	@extend %text--caption;
+	color: $C_textSecondary !important;
+	text-transform: initial;
+	font-variant: initial;
+	padding-top: initial;
+}
+
+.sitewide #my-meetup-groups-list div.D_group {
+	border-top: 1px solid $C_border;
+	margin: 0 $space 0 0;
+	padding: $space-half 0;
+}
+
+#my-meetup-groups-list.resetList .figureset-figure img {
+	margin-bottom: 0;
+}
+
+//
+// Right column
+//
+#D_groupMemberProfile .profileImageContainer {
+	background: initial;
+	padding: initial;
+}
+
+#D_groupMemberProfile .photo-nav-links {
+	background-color: initial;
+	border-top: 1px solid $C_border;
+	padding-left: initial;
+}
+
+#launch-profile-photos .subtext {
+	color: $C_textPrimary;
+}
+
+#D_groupMemberProfile .interest-topics, #D_groupMemberProfile .D_memberProfileGroups {
+	background: $C_contentBG;
+}
+
+.D_memberProfileGroups .paddedList {
+	padding: 0;
+}
+
+#D_groupMemberProfile.sitewide .interest-topics {
+	border: none !important;
+	// border-radius: $defaultRadius;
+}
+
+#D_groupMemberProfile #D_memberProfileAside .block-list-header ul.D_actions li {
+	font-size: $font-size-small;
+}
+
+#D_groupMemberProfile #D_memberProfileAside .block-list-header {
+	border-bottom: 1px solid $C_border;
+	// padding: $space-quarter $space;
+	margin-bottom: $space-half;
+	padding: initial;
+
+	&.shaded {
+		background: transparent;
+	}
+}
+
+#D_memberProfileAside h3 {
+	@extend %text--big;
+}
+
+.social-connections .groupinfo-widget.figureset {
+
+	.figureset-figure {
+		display: block;
+
+		.mem-photo-small {
+			margin-right: $space;
+		}
+	}
+
+	.figureset-description {
+		display: block;
+		padding-left: initial;
+
+		h3 {
+			margin-bottom: $space-half;
+		}
+	}
+
+}
+
+#D_groupMemberProfile #D_memberProfileAside .other-meetups-footer {
+	background-color: initial;
+	margin: $space-half 0 $space 0;
+	padding: initial;
+
+	.see-more-groups {
+		border: 1px solid $C_border;
+		padding: initial;
+		
+		&:hover {
+			background: $C_selection;
+		}
+
+		a {
+			color: $C_textPrimary;
+			display: block;
+			font-weight: $W_medium;
+			padding: $space-quarter $space-half;
+			text-transform: initial;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#memberTopicList {
+	padding: initial;
+}
+
+//
+// Profile photo picker
+//
+.photoPicker h2 {
+	@extend %text--big;
+}
+
+#pickerDiv .button.facebook-button,
+#pickerDiv.has4 .button.facebook-button {
+	background: $C_facebook;
+	box-shadow: none;
+	&:hover {
+		background: darken($C_facebook, 5%);
+	}
+	&:before {
+		border-right: none;
+		box-shadow: none;
+	}
+}
+
+#profileUploaderClose {
+	@include notSQ_button--primary();
+}

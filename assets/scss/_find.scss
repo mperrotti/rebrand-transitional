@@ -41,7 +41,7 @@
 // Logged in banner
 //
 #C_pagePreBody .find-navbar {
-	width: $bounds-wide;
+	// width: $bounds-wide;
 	margin-bottom: $space;
 }
 
@@ -109,9 +109,14 @@ html body #C_pageBody .searchResults .event-listing .event-title {
 	border: 1px solid $C_border;
 }
 
+/*
+//
+// Widen calendar for wide layout
+//
 #simple-date-selector .ui-datepicker table {
 	width: 301px;
 }
+*/
 
 #simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-prev, #simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-next,
 #simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, #simple-date-selector .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover {

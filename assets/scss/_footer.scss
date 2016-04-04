@@ -1,0 +1,17 @@
+// contrast start button
+#startFooterBtn {
+	stroke: transparent;
+	background: $C_textHint;
+	border-color: $C_borderInverted;
+}
+
+// text-only start button
+/*
+#startFooterBtn {
+	padding: 0 0 $space 0 !important;
+	font-size: $font-size;
+	font-weight: $W_medium;
+	display: block;
+	border-bottom: 1px solid $C_borderInverted;
+}
+*/

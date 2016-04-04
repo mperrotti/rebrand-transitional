@@ -1,0 +1,13 @@
+.align_avatars_top .line + h4.touchList-label--item {
+	font-weight: $W_medium;
+}
+
+#_content {
+	h4.touchList-label--item {
+		color: $C_textSecondary;
+		font-weight: $W_normal;
+	}
+	.line .unit, .line .lastUnit {
+		font-weight: $W_bold;
+	}
+} 
