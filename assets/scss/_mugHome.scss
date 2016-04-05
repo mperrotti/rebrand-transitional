@@ -454,8 +454,14 @@ html>body .wideContent #C_pageBody,
 	padding: $space-half $space;
 }
 
+.event-title {
+	@extend %text--big;
+	font-weight: $W_normal !important;
+}
+
 .event-attended {
 	@extend %text--caption;
+	margin-bottom: 0;
 }
 
 .past .event-rsvpPhotos {
@@ -506,4 +512,25 @@ html>body .wideContent #C_pageBody,
 
 .v4-photo-block-anc img {
 	width: 100%;
+}
+
+//
+// Private MUGs
+//
+#private-mug-urf + .docBox .docSection:first-child h2,
+#private-mug-urf h2 {
+	@extend %text--big;
+}
+
+#private-mug-urf + .docBox .docSection:first-child h2 {
+	margin-bottom: $space-half;
+}
+
+#private-mug-urf .urf-notice {
+	font-size: $font-size-small;
+	font-weight: $W_normal;
+}
+
+.semi-private-event-list h3 {
+	@extend %text--big;
 }

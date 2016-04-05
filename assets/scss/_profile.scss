@@ -6,6 +6,10 @@
 	padding: initial !important;
 }
 
+.profile-name {
+	@extend %text--big;
+}
+
 #D_groupMemberProfile {
 
 	h2 {

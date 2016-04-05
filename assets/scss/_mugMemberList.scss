@@ -8,3 +8,24 @@
 .memberStats {
 	margin-bottom: $space;
 }
+
+.member-details .memberActions .more-button {
+
+	background: initial;
+	border: initial;
+	border-radius: initial;
+	margin-left: initial;
+	padding: initial;
+
+	i.icon-more {
+		&:before {
+			content: '\E064';
+		}
+	}
+} 
+
+.memberInfo .cog-menu {
+	border-color: $C_border !important;
+	border-width: 1px !important;
+	box-shadow: 2px 2px 2px $C_selection;
+}
